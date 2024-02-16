@@ -22,4 +22,4 @@ class PerformanceHelp extends HTMLElement {
 
 
 
-customElements.define('costum-chart', PerformanceHelp);
+customElements.define('com-sap-sample-chart', PerformanceHelp);
