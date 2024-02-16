@@ -1,4 +1,6 @@
-<div>
+let tmpl = document.createElement('template');
+tmpl.innerHTML =
+  `<div>
   <canvas id="myChart"></canvas>
 </div>
 
@@ -26,3 +28,4 @@
     }
   });
 </script>
+  `;
