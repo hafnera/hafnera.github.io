@@ -102,8 +102,8 @@ var getScriptPromisify = (src) => {
             show: true
              color: '#464646',
              fontSize: 20,
-           distance: -60,
-            formatter: function (value) {
+             distance: -60,
+             formatter: function (value) {
                if (value === 0.875) {
                 return 'A'
                } else if (value === 0.625) {
