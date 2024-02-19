@@ -124,7 +124,7 @@ var getScriptPromisify = (src) => {
           },
           data: [
             {
-              value: 90,
+              value,
               name: 'Grade Rating'
             }
           ]
