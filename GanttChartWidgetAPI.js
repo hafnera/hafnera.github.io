@@ -177,7 +177,7 @@ public.Actual,202401,999,TaskDebugger,2023-02-02,2023-05-05,X,1`;
 
             // Load SACAPI_DataImport.js
             const script = document.createElement('script');
-            script.src = 'https://planifyit.github.io/Gantt_Chart_SAC_API/SACAPI_DataImport.js';
+            script.src = 'https://datobser.github.io/SACAPI_DataImport.js';
             document.head.appendChild(script);
 
         }
