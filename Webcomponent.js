@@ -34,24 +34,6 @@
     <input type="range" id="radius" min="0" max="20" value="0">
 </body>` ;
 
-    const brightnessRange = document.getElementById('brightness');
-    const blurRange = document.getElementById('blur');
-    const radiusRange = document.getElementById('radius');
-    const button = document.getElementById('myBtn');
-
-    brightnessRange.addEventListener('input', updateShadow);
-    blurRange.addEventListener('input', updateShadow);
-    radiusRange.addEventListener('input', updateShadow);
-
-    function updateShadow() {
-        const brightnessValue = brightnessRange.value;
-        const blurValue = blurRange.value;
-        const radiusValue = radiusRange.value;
-
-        const boxShadowValue = `0 2px ${blurValue}px rgba(0, 0, 0, ${brightnessValue / 200})`;
-        button.style.boxShadow = boxShadowValue;
-    }
-
     class PerformanceHelp extends HTMLElement {
         constructor() {
             super();
@@ -62,6 +44,33 @@
 
             let shadowRoot = this.attachShadow({ mode: "open" });
             shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            this.addEventListener("click", event => {
+                var event = new Event("onClick");
+                this.fireChanged();
+                this.dispatchEvent(event);
+            });
+
+
+            shadowRoot.appendChild(tmpl.content.cloneNode(true));
+
+            const brightnessRange = shadowRoot.getElementById('brightness');
+            const blurRange = shadowRoot.getElementById('blur');
+            const radiusRange = shadowRoot.getElementById('radius');
+            const button = shadowRoot.getElementById('myBtn');
+
+            brightnessRange.addEventListener('input', updateShadow);
+            blurRange.addEventListener('input', updateShadow);
+            radiusRange.addEventListener('input', updateShadow);
+
+            function updateShadow() {
+                const brightnessValue = brightnessRange.value;
+                const blurValue = blurRange.value;
+                const radiusValue = radiusRange.value;
+
+                const boxShadowValue = `0 2px ${blurValue}px rgba(0, 0, 0, ${brightnessValue / 200})`;
+                button.style.boxShadow = boxShadowValue;
+            }
+
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
                 this.fireChanged();
