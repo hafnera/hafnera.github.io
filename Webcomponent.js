@@ -10,6 +10,7 @@
 
          <body>
          <button type="button" id="myBtn">Helper Button</button>
+         </body>
         `;
     
 
