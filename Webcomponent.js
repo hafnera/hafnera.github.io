@@ -26,27 +26,6 @@
                 this.dispatchEvent(event);
             });
 
-
-            shadowRoot.appendChild(tmpl.content.cloneNode(true));
-
-            const brightnessRange = shadowRoot.getElementById('brightness');
-            const blurRange = shadowRoot.getElementById('blur');
-            const radiusRange = shadowRoot.getElementById('radius');
-            const button = shadowRoot.getElementById('myBtn');
-
-            brightnessRange.addEventListener('input', updateShadow);
-            blurRange.addEventListener('input', updateShadow);
-            radiusRange.addEventListener('input', updateShadow);
-
-            function updateShadow() {
-                const brightnessValue = brightnessRange.value;
-                const blurValue = blurRange.value;
-                const radiusValue = radiusRange.value;
-
-                const boxShadowValue = `0 2px ${blurValue}px ${radiusValue}px rgba(0, 0, 0, ${brightnessValue / 200})`;
-                button.style.boxShadow = boxShadowValue;
-            }
-
         }
 
         fireChanged() {
