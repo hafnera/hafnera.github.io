@@ -10,7 +10,7 @@
                 #myBtn {
                   position: absolute;
                   top: 50%;
-                  width: 20%;
+                  width: 0%;
                   text-align: center;
                   font-size: 18px;
                 }
