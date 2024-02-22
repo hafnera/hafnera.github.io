@@ -8,12 +8,11 @@
              <title>Button Shadow Customizer</title>
              <style>
                 #myBtn {
-                  position: fixed;
-                  bottom: 25;
-                  right: 25;
-                  width: 100px;
-                  height: 100px;
-                  border: 3px solid #73AD21;
+                    position: absolute;
+                    left: 150px;
+                    width: 200px;
+                    height: 120px;
+                    border: 3px solid green;
                 }
                 </style>
          </head>
