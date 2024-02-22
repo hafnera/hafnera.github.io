@@ -1,8 +1,23 @@
 (function () {
     let tmpl = document.createElement('template');
     tmpl.innerHTML =
-        ``;
-    // in innerHTML waren die Schieberegler implementiert
+        `<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Button Shadow Customizer</title>
+         </head>
+
+         <body>
+            <button type="button" id="myBtn">Helper Button</button>
+   
+            <input type="range" id="brightness" min="0" max="200" value="100">
+    
+            <input type="range" id="blur" min="0" max="10" value="0">
+    
+            <input type="range" id="radius" min="0" max="20" value="0">
+         </body>
+        `;
+    
 
     class PerformanceHelp extends HTMLElement {
         constructor() {
