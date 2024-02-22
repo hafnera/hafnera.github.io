@@ -14,7 +14,7 @@
                     height: 120px;
                     border: 3px solid green;
                 }
-                </style>
+             </style>
          </head>
 
          <body>
