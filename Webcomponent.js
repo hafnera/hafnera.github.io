@@ -41,7 +41,7 @@
             const brightnessRange = shadowRoot.getElementById('brightness');
             const blurRange = shadowRoot.getElementById('blur');
             const radiusRange = shadowRoot.getElementById('radius');
-            const button = shadowRoot.getElementById('myBtn');
+            //const button = shadowRoot.getElementById('myBtn');
 
             brightnessRange.addEventListener('input', updateShadow);
             blurRange.addEventListener('input', updateShadow);
