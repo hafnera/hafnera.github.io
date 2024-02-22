@@ -9,6 +9,8 @@
              <style>
                 #myBtn {
                     position: absolute;
+                    bottom: 10px;
+                    right:150px;
                     left: 150px;
                     width: 200px;
                     height: 120px;
