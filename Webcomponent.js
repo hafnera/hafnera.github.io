@@ -15,6 +15,10 @@
                     width: 200px;
                     height: 120px;
                     border: 3px solid green;
+                    background: rgba(152,165,204,0.5);
+                    -webkit-backdrop-filter: blur(10px);
+                    backdrop-filter: blur(10px);
+                    border: 1px solid rgba(152,165,204,0.25);
                 }
              </style>
          </head>
