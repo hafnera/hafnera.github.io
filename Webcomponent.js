@@ -56,11 +56,6 @@
                 button.style.boxShadow = boxShadowValue;
             }
 
-            this.addEventListener("click", event => {
-                var event = new Event("onClick");
-                this.fireChanged();
-                this.dispatchEvent(event);
-            });
         }
 
         fireChanged() {
