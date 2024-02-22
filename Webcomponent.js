@@ -8,7 +8,7 @@
          </head>
 
          <body>
-            <button type="button" id="myBtn">Helper Button</button>
+            //<button type="button" id="myBtn">Helper Button</button>
    
             <input type="range" id="brightness" min="0" max="200" value="100">
     
@@ -41,7 +41,7 @@
             const brightnessRange = shadowRoot.getElementById('brightness');
             const blurRange = shadowRoot.getElementById('blur');
             const radiusRange = shadowRoot.getElementById('radius');
-            //const button = shadowRoot.getElementById('myBtn');
+            const button = shadowRoot.getElementById('myBtn');
 
             brightnessRange.addEventListener('input', updateShadow);
             blurRange.addEventListener('input', updateShadow);
