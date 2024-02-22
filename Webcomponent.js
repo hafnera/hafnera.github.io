@@ -7,22 +7,12 @@
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <title>Button Shadow Customizer</title>
              <style>
-                .container {
-                      position: relative;
-                }
-
-                myBtn.center {
+                #myBtn {
                   position: absolute;
                   top: 50%;
                   width: 100%;
                   text-align: center;
                   font-size: 18px;
-                }
-                
-                img { 
-                  width: 100%;
-                  height: auto;
-                  opacity: 0.3;
                 }
                 </style>
          </head>
