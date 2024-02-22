@@ -8,7 +8,7 @@
          </head>
 
          <body>
-            //<button type="button" id="myBtn">Helper Button</button>
+            <button type="button" id="myBtn">Helper Button</button>
    
             <input type="range" id="brightness" min="0" max="200" value="100">
     
