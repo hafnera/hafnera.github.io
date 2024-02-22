@@ -67,7 +67,7 @@
                 const blurValue = blurRange.value;
                 const radiusValue = radiusRange.value;
 
-                const boxShadowValue = `0 2px ${blurValue}px rgba(0, 0, 0, ${brightnessValue / 200})`;
+                const boxShadowValue = `0 2px ${blurValue}px ${radiusValue}px rgba(0, 0, 0, ${brightnessValue / 200})`;
                 button.style.boxShadow = boxShadowValue;
             }
 
