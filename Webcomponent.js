@@ -3,16 +3,16 @@
     tmpl.innerHTML =
         `
          <head>
-         <meta charset="UTF-8">
-         <meta name="viewport" content="width=device-width/2, initial-scale=1.0">
-         <title>Button Shadow Customizer</title>
+             <meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width/2, initial-scale=1.0">
+             <title>Button Shadow Customizer</title>
              <style>
                 #myBtn {
-                  position: absolute;
-                  top: 50%;
-                  width: 50%;
-                  text-align: center;
-                  font-size: 18px;
+                  position: fixed;
+                  bottom: 0;
+                  right: 0;
+                  width: 300px;
+                  border: 3px solid #73AD21;
                 }
                 </style>
          </head>
