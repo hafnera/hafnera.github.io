@@ -21,7 +21,7 @@
                     border: 1px solid rgba(152,165,204,0.25);
                 }
                 /*body{
-                    background-image: url("paper.gif");
+                    background-image: url("https://datobser.github.io/Bild.png");
                 }*/
              </style>
          </head>
