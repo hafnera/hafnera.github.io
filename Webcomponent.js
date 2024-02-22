@@ -20,9 +20,9 @@
                     backdrop-filter: blur(10px);
                     border: 1px solid rgba(152,165,204,0.25);
                 }
-                /*body{
+                body{
                     background-image: url("https://datobser.github.io/Bild.png");
-                }*/
+                }
              </style>
          </head>
 
