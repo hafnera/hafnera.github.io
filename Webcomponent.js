@@ -9,9 +9,10 @@
              <style>
                 #myBtn {
                   position: fixed;
-                  bottom: 0;
-                  right: 0;
-                  width: 500px;
+                  bottom: 25;
+                  right: 25;
+                  width: 100px;
+                  height: 100px;
                   border: 3px solid #73AD21;
                 }
                 </style>
