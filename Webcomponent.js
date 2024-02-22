@@ -20,6 +20,9 @@
                     backdrop-filter: blur(10px);
                     border: 1px solid rgba(152,165,204,0.25);
                 }
+                /*body{
+                    background-image: url("paper.gif");
+                }*/
              </style>
          </head>
 
