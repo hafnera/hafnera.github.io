@@ -2,6 +2,13 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML =
         `
+         <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Button Shadow Customizer</title>
+         </head>
+
+         <body>
          <button type="button" id="myBtn">Helper Button</button>
         `;
     
