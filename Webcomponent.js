@@ -11,7 +11,7 @@
                       position: relative;
                 }
 
-                .center {
+                myBtn.center {
                   position: absolute;
                   top: 50%;
                   width: 100%;
