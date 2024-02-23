@@ -7,27 +7,12 @@
              <meta name="viewport" content="width=device-width, initial-scale=1.0">
              <title>Button Shadow Customizer</title>
              <style>
-                #myBtn {
-                    position: absolute;
-                    bottom: 50px;
-                    right:150px;
-                    left: 150px;
-                    width: 200px;
-                    height: 120px;
-                    border: 3px solid green;
-                    background: rgba(152,165,204,0.5);
-                    -webkit-backdrop-filter: blur(10px);
-                    backdrop-filter: blur(10px);
-                    border: 1px solid rgba(152,165,204,0.25);
-                }
-                body{
-                    background-image: url("https://datobser.github.io/Bild.png");
-                }
+                
              </style>
          </head>
 
          <body>
-         <button type="button" id="myBtn">Helper Button</button>
+          <canvas id="myCanvas" width="200" height="100"></canvas>
          </body>
         `;
     
