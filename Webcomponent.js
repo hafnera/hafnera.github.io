@@ -23,7 +23,7 @@
             <script>
                 myCanvas.shadowColor = "grey";
                 myCanvas.shadowBlur = 15;
-            >/script>
+            </script>
          </body>
         `;
     
