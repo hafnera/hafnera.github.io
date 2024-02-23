@@ -21,7 +21,7 @@
 </head>
 
 <body>
-
+    <canvas id="myUpperCanvas"></canvas>
     <div class="polaroid">
 
         <div class="container">
