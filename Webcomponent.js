@@ -6,7 +6,13 @@
             <meta charset="UTF-8">
             <title>Polaroid Viewport</title>
             <style>
-        
+                .body{
+                    background-color: yellow;
+                    margin: auto;
+                    padding: 0px;
+                    height: 100%;
+                    width: 50%;
+                }
                 .polaroid {
                     width: 90%;
                     height: 90%;
