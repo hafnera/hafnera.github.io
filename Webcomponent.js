@@ -12,7 +12,7 @@
                     margin: auto;
                     padding: 0px;
                     height: 100%;
-                    width: 100%;
+                    width: 90%;
         
                 }
         
