@@ -16,8 +16,8 @@
                 }
         
                 .polaroid {
-                    width: 90%;
-                    height: 90%;
+                    width: 70%;
+                    height: 70%;
                     padding: 20px;
                     background-color: coral;
                     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
