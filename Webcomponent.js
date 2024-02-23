@@ -10,15 +10,16 @@
                 body {
                     background-color: yellow;
                     margin: auto;
-                    padding: 10px;
+                    padding: 0px;
                     height: 100%;
                     width: 100%;
+        
                 }
         
                 .polaroid {
-                    width: 70%;
-                    height: 70%;
-                    padding: 20px;
+                    width: 90%;
+                    height: 90%;
+                    padding: 10px;
                     background-color: coral;
                     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
                     display: flex;
