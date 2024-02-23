@@ -3,26 +3,33 @@
     tmpl.innerHTML =
        `
         <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Polaroid Viewport</title>
-        <style>
-            .polaroid {
-                width: 90vw;
-                /* 90% of the viewport width */
-                height: 90vh;
-                /* 90% of the viewport height */
-                margin: auto;
-                /* Center the polaroid */
-                padding: 15px;
-                background-color: coral;
-                border: black;
-                box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-                
-            }
-        </style>
+            <meta charset="UTF-8">
+            <title>Polaroid Viewport</title>
+            <style>
+                html,
+                body {
+                    background-color: yellow;
+                    margin: auto;
+                    padding: 10px;
+                    height: 100%;
+                    width: 100%;
+                    overflow: hidden;
+                    /* To prevent scrollbars */
+                }
+        
+                .polaroid {
+                    width: 90%;
+                    height: 90%;
+                    padding: 20px;
+                    background-color: coral;
+                    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            </style>
         </head>
-
+        
         <body>
             <div class="polaroid"></div>
         </body>
