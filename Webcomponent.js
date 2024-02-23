@@ -27,11 +27,6 @@
         </head>
         
         <body>
-            background-color: yellow;
-            margin: auto;
-            padding: 0px;
-            height: 100%;
-            width: 50%;
             <div class="polaroid"></div>
         </body>
        `;
