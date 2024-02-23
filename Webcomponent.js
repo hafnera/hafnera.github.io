@@ -21,7 +21,8 @@
             <canvas id="myCanvas"></canvas>
 
             <script>
-                
+                myCanvas.shadowColor = "grey";
+                myCanvas.shadowBlur = 15;
             >/script>
          </body>
         `;
