@@ -11,6 +11,7 @@
                  #myCanvas{
                      border:1px solid #d3d3d3;
                      width: 100%;
+                     height: 100%;
                  }
                  
              </style>
@@ -20,9 +21,7 @@
             <canvas id="myCanvas"></canvas>
 
             <script>
-                var canvas = document.getElementById('responsive-canvas');
-                var heightRatio = 1.5;
-                canvas.height = canvas.width * heightRatio;
+                
             >/script>
          </body>
         `;
