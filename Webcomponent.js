@@ -1,27 +1,30 @@
 (function () {
     let tmpl = document.createElement('template');
     tmpl.innerHTML =
-        `
-         <head>
-             <meta charset="UTF-8">
-             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-             <title>Button Shadow Customizer</title>
-             <style>
-                 #polaroid{
-                      width: 300px;
-                      height: 100px;
-                      padding: 15px;
-                      background-color: coral;
-                      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-                 }
-                 
-             </style>
-         </head>
+       `
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Polaroid Viewport</title>
+        <style>
+            .polaroid {
+                width: 90vw;
+                /* 90% of the viewport width */
+                height: 90vh;
+                /* 90% of the viewport height */
+                margin: auto;
+                /* Center the polaroid */
+                padding: 15px;
+                background-color: white;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+        </style>
+        </head>
 
-         <body>
-            <div class="polaroid">
-         </body>
-        `;
+        <body>
+            <div class="polaroid"></div>
+        </body>
+       `;
     
 
     class PerformanceHelp extends HTMLElement {
