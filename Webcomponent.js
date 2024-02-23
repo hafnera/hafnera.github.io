@@ -22,8 +22,6 @@
 
 <body>
 
-    <canvas id="myUpperCanvas"></canvas>
-
     <div class="polaroid">
 
         <div class="container">
@@ -33,10 +31,7 @@
         </div>
 
     </div>
-
-    <canvas id="myLowerCanvas">
-        
-    </canvas>
+    
 </body>
 
 </html>
