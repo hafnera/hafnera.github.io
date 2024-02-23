@@ -7,11 +7,9 @@
              <meta name="viewport" content="width=device-width, initial-scale=1.0">
              <title>Button Shadow Customizer</title>
              <style>
-             
                  #polaroid{
-                     border:1px solid #d3d3d3;
-                     width: 90%;
-                     height: 90%;
+                     width: 100%;
+                     height: 100%;
                      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                  }
                  
