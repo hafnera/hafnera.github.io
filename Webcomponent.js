@@ -12,9 +12,7 @@
                      border:1px solid #d3d3d3;
                      width: 100%;
                      height: 100%;
-                     background: rgb(128,128,128);
-                     -webkit-backdrop-filter: blur(10px);
-                     backdrop-filter: blur(10px);
+                     shadow: rgb(128,128,128);
                  }
                  
              </style>
