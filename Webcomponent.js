@@ -20,7 +20,9 @@
             <canvas id="myCanvas"></canvas>
 
             <script>
-            
+                var canvas = document.getElementById('responsive-canvas');
+                var heightRatio = 1.5;
+                canvas.height = canvas.width * heightRatio;
             >/skript>
          </body>
         `;
