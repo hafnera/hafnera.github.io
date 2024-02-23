@@ -17,7 +17,7 @@
                 padding: 15px;
                 background-color: coral;
                 border: black;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
                 
             }
         </style>
