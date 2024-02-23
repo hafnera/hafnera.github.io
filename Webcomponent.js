@@ -2,33 +2,35 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML =
        `
-        <head>
-            <meta charset="UTF-8">
-            <title>Polaroid Viewport</title>
-            <style>
-                .body{
-                    background-color: yellow;
-                    margin: auto;
-                    padding: 0px;
-                    height: 100%;
-                    width: 50%;
-                }
-                .polaroid {
-                    width: 90%;
-                    height: 90%;
-                    padding: 10px;
-                    background-color: coral;
-                    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-            </style>
-        </head>
-        
-        <body>
-            <div class="polaroid"></div>
-        </body>
+       <head>
+    <style>
+        div.polaroid {
+
+            width: 300px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+        }
+
+        div.container {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Create Polaroid Images</h1>
+
+    <p>The box-shadow property can be used to create polaroid images:</p>
+
+    <div class="polaroid">
+        <img src="rock600x400.jpg" alt="Norway" style="width:100%">
+        <div class="container">
+            <p>Hardanger, Norway</p>
+        </div>
+    </div>
+
+</body>
        `;
     
 
