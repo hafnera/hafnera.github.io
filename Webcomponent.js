@@ -22,22 +22,21 @@
 
 <body>
 
-    <canvas id="myUpperCanvas">
-        Your browser does not support the canvas tag.
-    </canvas>
+    <canvas id="myUpperCanvas"></canvas>
 
     <div class="polaroid">
-        <img src="rock600x400.jpg" alt="" style="width:100%">
-        <canvas id="myUpperCanvas">
-            Your browser does not support the canvas tag.
-        </canvas>
+
         <div class="container">
             <canvas id="myCanvas">
-                Your browser does not support the canvas tag.
+            
             </canvas>
         </div>
+
     </div>
 
+    <canvas id="myLowerCanvas">
+        
+    </canvas>
 </body>
 
 </html>
