@@ -2,39 +2,34 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML =
        `
-       <!DOCTYPE html>
-<html>
-
-<head>
-    <style>
-        div.polaroid {
-            margin: auto;
-            width: 90%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            text-align: center;
-        }
-
-        div.container {
-            padding: 10px;
-        }
-    </style>
-</head>
-
-<body>
-    <canvas id="myUpperCanvas"></canvas>
-    <div class="polaroid">
-
-        <div class="container">
-            <canvas id="myCanvas">
+        <head>
+            <style>
+                div.polaroid {
+                    margin: auto;
+                    width: 90%;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    text-align: center;
+                }
+        
+                div.container {
+                    padding: 10px;
+                }
+            </style>
+        </head>
+        
+        <body>
+            <h6> </h6>
+            <div class="polaroid">
+        
+                <div class="container">
+                    <canvas id="myCanvas">
+                    
+                    </canvas>
+                </div>
+        
+            </div>
             
-            </canvas>
-        </div>
-
-    </div>
-    
-</body>
-
-</html>
+        </body>
        `;
     
 
