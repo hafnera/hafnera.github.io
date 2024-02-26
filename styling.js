@@ -1,21 +1,23 @@
 (function() {
     let template = document.createElement("template");
     template.innerHTML = `
-        <form id="form">
-            <fieldset>
-                <legend>Styling Panel</legend>
-                <table>
-                    <tr>
-                        <td>Shadow</td>
-                        <td><input id="shadow_input" type="checkbox"></td>
-                    </tr>
-                    <tr>
-                        <td>Size</td>
-                        <td><input id="size_input" type="range" min="1" max="100" value="50"></td>
-                    </tr>
-                </table>
-            </fieldset>
-        </form>
+        <body>
+            <form id="form">
+                <fieldset>
+                    <legend>Styling Panel</legend>
+                    <table>
+                        <tr>
+                            <td>Shadow</td>
+                            <td><input id="shadow_input" type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>Size</td>
+                            <td><input id="size_input" type="range" min="1" max="100" value="50"></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </body>
     `;
 
     class StylingPanel extends HTMLElement {
