@@ -1,45 +1,52 @@
-(function () {
+(function() {
     let template = document.createElement("template");
     template.innerHTML = `
-                            <form id="form">
-                            <fieldset>
-                            <legend>Box Properties</legend>
-                            <table>
-                            <tr>
-                            <td>Color</td>
-                            <td><input id="styling_color" type="text" size="40"
-                            maxlength="40"></td>
-                            </tr>
-                            </table>
-                            <input type="submit" style="display:none;">
-                            </fieldset>
-                            </form>
-                        `;
-    class ColoredBoxStylingPanel extends HTMLElement {
+        <form id="form">
+            <fieldset>
+                <legend>Styling Panel</legend>
+                <table>
+                    <tr>
+                        <td>Shadow</td>
+                        <td><input id="shadow_input" type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>Size</td>
+                        <td><input id="size_input" type="range" min="1" max="100" value="50"></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    `;
+
+    class StylingPanel extends HTMLElement {
         constructor() {
             super();
-            this._shadowRoot = this.attachShadow({ mode: "open" });
+            this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(template.content.cloneNode(true));
-            this._shadowRoot.getElementById("form").addEventListener("submit",
-                this._submit.bind(this));
+            this._shadowRoot.getElementById("form").addEventListener("input", this._updateProperties.bind(this));
         }
-        _submit(e) {
-            e.preventDefault();
+
+        _updateProperties() {
+            const shadowValue = this._shadowRoot.getElementById("shadow_input").checked;
+            const sizeValue = this._shadowRoot.getElementById("size_input").value;
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: {
-                        color: this.color
+                        shadow: shadowValue,
+                        size: sizeValue
                     }
                 }
             }));
         }
-        set color(newColor) {
-            this._shadowRoot.getElementById("styling_color").value = newColor;
+
+        set shadow(value) {
+            this._shadowRoot.getElementById("shadow_input").checked = value;
         }
-        get color() {
-            return this._shadowRoot.getElementById("styling_color").value;
+
+        set size(value) {
+            this._shadowRoot.getElementById("size_input").value = value;
         }
     }
-    customElements.define("custom-button-styling",
-        ColoredBoxStylingPanel);
-})
+
+    customElements.define("custom-button-styling", StylingPanel);
+})();
