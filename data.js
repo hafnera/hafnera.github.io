@@ -40,7 +40,7 @@
             console.log('clicked!')
             
             const cars = ["Saab", "Volvo", "BMW"];
-            this.setData(fruits);
+            this.setData(cars);
             
           // Dispatch onClick event
           this.dispatchEvent(new CustomEvent('onClick'))
