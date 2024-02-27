@@ -38,6 +38,11 @@
 
         _onClick(event) {
             console.log('clicked!')
+            
+            var fruits = ArrayUtils.create(Type.string);;
+            fruits.push("banana");
+            this.setData(fruits);
+            
           // Dispatch onClick event
           this.dispatchEvent(new CustomEvent('onClick'))
     }
