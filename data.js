@@ -34,6 +34,7 @@
         }
 
         _onClick(event) {
+            console.log('clicked!')
           // Dispatch onClick event
           this.dispatchEvent(new CustomEvent('onClick'))
     }
