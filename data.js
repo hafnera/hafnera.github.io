@@ -35,5 +35,5 @@
     }
 
     // Define custom element and register it
-    customElements.define('custom-widget', CustomWidget)
+    customElements.define('custom-widget-2', CustomWidget)
 })()
