@@ -21,6 +21,9 @@
 
             // Bind method context
             this.setData = this.setData.bind(this)
+
+            const rootElement = this._shadowRoot.getElementById('root')
+            rootElement.addEventListener('click', this._handleClick.bind(this))
         }
 
         // Method to set data in the widget
