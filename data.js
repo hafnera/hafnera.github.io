@@ -32,6 +32,11 @@
             const contentElement = this._shadowRoot.getElementById('content')
             contentElement.innerHTML = JSON.stringify(data)
         }
+
+        _onClick(event) {
+          // Dispatch onClick event
+          this.dispatchEvent(new CustomEvent('onClick'))
+    }
     }
 
     // Define custom element and register it
