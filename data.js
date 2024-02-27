@@ -39,8 +39,7 @@
         _onClick(event) {
             console.log('clicked!')
             
-            var fruits = ArrayUtils.create(Type.string);;
-            fruits.push("banana");
+            const cars = ["Saab", "Volvo", "BMW"];
             this.setData(fruits);
             
           // Dispatch onClick event
