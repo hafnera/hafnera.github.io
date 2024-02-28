@@ -1,0 +1,36 @@
+{
+    "name": "customWidget2",
+    "description": "Custom widget with setData method",
+    "newInstancePrefix": "custom-widget",
+    "vendor": "Your Vendor Name",
+    "version": "1.0.0",
+    "icon": "",
+    "id": "customWidget2",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "custom-widget-2",
+            "url": "https://datobser.github.io/data.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+    ],
+    "properties": {},
+    "methods": {
+        "setData": {
+            "description": "Set data for the widget",
+            "parameters": [
+                {
+                    "name": "data",
+                    "type": "string[]",
+                    "description": "The data to be set in the widget"
+                }
+            ]
+        }
+    },
+    "events": {
+        "onClick": {
+            "description": "Called when the user clicks the widget."
+        }
+    }
+}
