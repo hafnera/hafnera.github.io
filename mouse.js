@@ -22,8 +22,10 @@
       }
     </style>
     <div id="root">
+      <div id="content">
       <!-- Widget content -->
-      Click me!
+      Hover over me!
+      </div>
     </div>
   `
 
