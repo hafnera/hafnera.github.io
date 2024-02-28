@@ -32,6 +32,10 @@
       rootElement.addEventListener('click', this._handleClick.bind(this))
       rootElement.addEventListener('mouseover', this._handleMouseOver.bind(this))
       rootElement.addEventListener('mouseout', this._handleMouseOut.bind(this))
+
+      // Add event listener for the resize event
+      window.addEventListener('resize', this.onResize.bind(this))
+
     }
 
     // Event handler for onClick
@@ -58,6 +62,12 @@
       console.log('Mouse out of the widget!')
       // Example: Reset text color on mouse out
       event.target.style.color = 'black'
+    }
+    onResize() {
+            console.log('Window has been resized!');
+            const rootElement = this._shadowRoot.getElementById('root');
+            rootElement.style.width = `${window.innerWidth}px`;
+            rootElement.style.height = `${window.innerHeight}px`;
     }
   }
 
