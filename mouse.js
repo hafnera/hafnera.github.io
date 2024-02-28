@@ -12,6 +12,14 @@
         box-sizing: border-box;
         cursor: pointer; /* Add pointer cursor to indicate clickability */
       }
+      #content {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          right: 10px;
+          bottom: 10px;
+          background-color: white;
+      }
     </style>
     <div id="root">
       <!-- Widget content -->
