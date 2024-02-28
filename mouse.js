@@ -19,6 +19,9 @@
           right: 10px;
           bottom: 10px;
           background-color: white;
+          width: var(--content-width); /* Using CSS variable for width */
+          height: var(--content-height); /* Using CSS variable for height */
+          
       }
     </style>
     <div id="root">
@@ -78,8 +81,8 @@
             const contentElement = this._shadowRoot.getElementById('content');
             const rootWidth = rootElement.clientWidth;
             const rootHeight = rootElement.clientHeight;
-            contentElement.style.width = `${rootWidth - 20}px`;
-            contentElement.style.height = `${rootHeight - 20}px`;
+            contentElement.style.setProperty('--content-width', `${rootWidth - 20}px`);
+            contentElement.style.setProperty('--content-height', `${rootHeight - 20}px`);
     }
   }
 
