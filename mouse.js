@@ -67,8 +67,11 @@
     onResize() {
             console.log('Window has been resized!');
             const rootElement = this._shadowRoot.getElementById('root');
-            rootElement.style.width = `${window.innerWidth}px`;
-            rootElement.style.height = `${window.innerHeight}px`;
+            const contentElement = this._shadowRoot.getElementById('content');
+            const rootWidth = rootElement.clientWidth;
+            const rootHeight = rootElement.clientHeight;
+            contentElement.style.width = `${rootWidth - 20}px`;
+            contentElement.style.height = `${rootHeight - 20}px`;
     }
   }
 
