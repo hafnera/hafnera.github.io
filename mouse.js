@@ -35,7 +35,8 @@
 
       // Add event listener for the resize event
       window.addEventListener('resize', this.onResize.bind(this))
-
+      this.onResize();
+      
     }
 
     // Event handler for onClick
