@@ -25,6 +25,15 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
         </style>
+        
+        <body>
+            <div id="root">
+                <div id="content">
+                    <!-- Widget content -->
+                    Content
+                </div>
+            </div>
+        </body>
        `;
 
     class PerformanceHelp extends HTMLElement {
