@@ -46,7 +46,7 @@
         init() {
 
             this._shadowRoot = this.attachShadow({ mode: 'open' });
-            this._shadowRoot.appendChild(template.content.cloneNode(true));
+            this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
 
             // Add event listener for the resize event
             window.addEventListener('resize', this.onResize.bind(this))
