@@ -1,73 +1,52 @@
 (function () {
-    const template = document.createElement('template');
+    const template = document.createElement('template')
     template.innerHTML = `
-      <style>
-        /* CSS styles for the widget */
-        #root {
-          position: relative;
-          width: 200px;
-          height: 100px;
-          background-color: #f0f0f0;
-          border: 1px solid #ccc;
-          padding: 10px;
-          box-sizing: border-box;
-        }
-        #content {
-          position: absolute;
-          top: 10px;
-          left: 10px;
-          right: 10px;
-          bottom: 10px;
-          background-color: white;
-          /* Add box-shadow */
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-      </style>
       <div id="root">
-        <div id="content">
-          <!-- Widget content -->
-          Hover over me!
-        </div>
+        <!-- Widget content -->
+        <h2>Title</h2>
+        <div id="content"></div>
       </div>
-    `;
+    `
 
     class CustomWidget extends HTMLElement {
         constructor() {
-            super();
+            super()
 
             // Initialize shadow DOM and add template
-            this._shadowRoot = this.attachShadow({ mode: 'open' });
-            this._shadowRoot.appendChild(template.content.cloneNode(true));
+            this._shadowRoot = this.attachShadow({ mode: 'open' })
+            this._shadowRoot.appendChild(template.content.cloneNode(true))
 
-            // Add event listeners for mouseover and mouseout
-            const rootElement = this._shadowRoot.getElementById('root');
-            rootElement.addEventListener('mouseover', this._handleMouseOver.bind(this));
-            rootElement.addEventListener('mouseout', this._handleMouseOut.bind(this));
+            // Initialize empty data object
+            this._data = {}
 
-            // Add event listener for the resize event
-            window.addEventListener('resize', this.onResize.bind(this));
+            // Bind method context
+            this.setData = this.setData.bind(this)
+
+            const rootElement = this._shadowRoot.getElementById('root')
+            rootElement.addEventListener('click', this._onClick.bind(this))
         }
 
-        _handleMouseOver(event) {
-            console.log('Mouse over the widget!');
-            event.target.style.backgroundColor = '#ccc';
+        // Method to set data in the widget
+        setData(data) {
+            // Update internal data
+            this._data = data
+
+            // Update displayed content
+            const contentElement = this._shadowRoot.getElementById('content')
+            contentElement.innerHTML = JSON.stringify(data)
         }
 
-        _handleMouseOut(event) {
-            console.log('Mouse out of the widget!');
-            event.target.style.backgroundColor = '#f0f0f0';
-        }
-
-        onResize() {
-            console.log('Window has been resized!');
-            const rootElement = this._shadowRoot.getElementById('root');
-            const contentElement = this._shadowRoot.getElementById('content');
-            const rootWidth = rootElement.clientWidth;
-            const rootHeight = rootElement.clientHeight;
-            contentElement.style.width = `${rootWidth - 20}px`; // Subtract 20px for padding
-            contentElement.style.height = `${rootHeight - 20}px`; // Subtract 20px for padding
-        }
+        _onClick(event) {
+            console.log('clicked!')
+            
+            const cars = ["Saab", "Volvo", "BMW"];
+            this.setData(cars);
+            
+          // Dispatch onClick event
+          this.dispatchEvent(new CustomEvent('onClick'))
+    }
     }
 
-    customElements.define('custom-widget', CustomWidget);
-})();
+    // Define custom element and register it
+    customElements.define('custom-widget-2', CustomWidget)
+})()
