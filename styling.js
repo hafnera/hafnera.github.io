@@ -1,51 +1,44 @@
 (function() {
     let template = document.createElement("template");
     template.innerHTML = `
-        <head>
-            <style>
-                
-            </style>
-        </head>
-        <body>
-            <form id="form">
-                <fieldset>
-                    <legend>Styling Panel</legend>
-                    <table>
-                        <tr>
-                            <td>Shadow</td>
-                            <td><input id="shadow_input" type="checkbox"></td>
-                        </tr>
-                        <tr>
-                            <td>Size</td>
-                            <td><input id="size_input" type="range" min="1" max="100" value="50"></td>
-                        </tr>
-                    </table>
-                </fieldset>
-            </form>
-        </body>
-    `;
-
-    class StylingPanel extends HTMLElement {
+                            <form id="form">
+                            <fieldset>
+                            <legend>Colored Box Properties</legend>
+                            <table>
+                            <tr>
+                            <td>Color</td>
+                            <td><input id="styling_color" type="text" size="40"
+                            maxlength="40"></td>
+                            </tr>
+                            </table>
+                            <input type="submit" style="display:none;">
+                            </fieldset>
+                            </form>
+                        `;
+    class ColoredBoxStylingPanel extends HTMLElement {
         constructor() {
             super();
-            this.init();
-        }
-
-        _init() {
-         let shadowRoot = this.attachShadow({ mode: "open" });
-            shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            this.addEventListener("click", event => {
-                var event = new Event("onClick");
-                this.fireChanged();
-                this.dispatchEvent(event);
-            });
-
-        }
-
-         fireChanged() {
-                console.log("OnClick Triggered");
-    
+            this._shadowRoot = this.attachShadow({mode: "open"});
+            this._shadowRoot.appendChild(template.content.cloneNode(true));
+            this._shadowRoot.getElementById("form").addEventListener("submit",
+            this._submit.bind(this));
             }
+            _submit(e) {
+                e.preventDefault();
+                this.dispatchEvent(new CustomEvent("propertiesChanged", {
+                detail: {
+                properties: {
+                color: this.color
+            }
+        }
         
-    customElements.define("custom-button-styling", StylingPanel);
-})();
+    }
+        set color(newColor) {
+            this._shadowRoot.getElementById("styling_color").value = newColor;
+        }
+        get color() {
+            return this._shadowRoot.getElementById("styling_color").value;
+        }
+        }
+        customElements.define("com-sap-sample-coloredbox-styling",ColoredBoxStylingPanel);
+ });
