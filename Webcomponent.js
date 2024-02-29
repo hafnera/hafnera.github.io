@@ -25,17 +25,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
         </style>
-        
-        <body>
-            <div id="root">
-                <div id="content">
-                    <!-- Widget content -->
-                    Content
-                </div>
-            </div>
-        </body>
        `;
-    
 
     class PerformanceHelp extends HTMLElement {
         constructor() {
@@ -44,15 +34,13 @@
         }
 
         init() {
-
+            // Erstelle die Schattenwurzel und füge das Template hinzu
             this._shadowRoot = this.attachShadow({ mode: 'open' });
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
 
-            // Add event listener for the resize event
-            const rootElement = this._shadowRoot.getElementById('root');
-            window.addEventListener('resize', this.onResize.bind(this))
+            // Füge Event-Listener für das Resize-Ereignis hinzu
+            window.addEventListener('resize', this.onResize.bind(this));
             this.onResize();
-
         }
 
         onResize() {
@@ -64,8 +52,6 @@
             contentElement.style.width = `${rootWidth - 20}px`; 
             contentElement.style.height = `${rootHeight - 20}px`; 
         }
-
-
     }
 
     customElements.define('custom-button', PerformanceHelp);
