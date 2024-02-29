@@ -11,8 +11,7 @@
             left: 10px;
             right: 10px;
             bottom: 10px;
-            background-color: white;
-            /* Add box-shadow */
+            background-color: rgba(255, 255, 255, 0.5);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
         </style>
