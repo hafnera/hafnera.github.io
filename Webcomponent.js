@@ -47,18 +47,23 @@
 
             let shadowRoot = this.attachShadow({ mode: "open" });
             shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            this.addEventListener("click", event => {
-                var event = new Event("onClick");
-                this.fireChanged();
-                this.dispatchEvent(event);
-            });
+
+            // Add event listener for the resize event
+            window.addEventListener('resize', this.onResize.bind(this))
+            this.onResize();
 
         }
 
-        fireChanged() {
-            console.log("OnClick Triggered");
-
+        onResize() {
+            console.log('Window has been resized!');
+            const rootElement = this._shadowRoot.getElementById('root');
+            const contentElement = this._shadowRoot.getElementById('content');
+            const rootWidth = rootElement.clientWidth;
+            const rootHeight = rootElement.clientHeight;
+            contentElement.style.width = `${rootWidth - 20}px`; 
+            contentElement.style.height = `${rootHeight - 20}px`; 
         }
+
 
     }
 
