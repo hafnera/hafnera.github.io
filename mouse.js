@@ -11,6 +11,7 @@
         padding: 10px;
         box-sizing: border-box;
         cursor: pointer; /* Add pointer cursor to indicate clickability */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       }
       #content {
           position: absolute;
