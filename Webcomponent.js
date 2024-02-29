@@ -20,7 +20,6 @@
             <div id="root">
                 <div id="content">
                     <!-- Widget content -->
-                    Content
                 </div>
             </div>
         </body>
