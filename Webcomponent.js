@@ -52,5 +52,5 @@
         }
     }
 
-    customElements.define('custom-button', PerformanceHelp);
+    customElements.define('shadow-widget', PerformanceHelp);
 })();
