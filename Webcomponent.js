@@ -2,33 +2,37 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML =
        `
-        <head>
-            <style>
-                div.polaroid {
-                    margin: auto;
-                    width: 90%;
-                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                    text-align: center;
-                }
-        
-                div.container {
-                    padding: 10px;
-                }
-            </style>
-        </head>
+        <style>
+        /* CSS styles for the widget */
+        #root {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    
+        #content {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            background-color: white;
+            /* Add box-shadow */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        </style>
         
         <body>
-            <h6> </h6>
-            <div class="polaroid">
-        
-                <div class="container">
-                    <canvas id="myCanvas">
-                    
-                    </canvas>
+            <div id="root">
+                <div id="content">
+                    <!-- Widget content -->
+                    Content
                 </div>
-        
             </div>
-            
         </body>
        `;
     
