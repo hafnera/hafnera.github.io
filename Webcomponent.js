@@ -49,6 +49,7 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
 
             // Add event listener for the resize event
+            const rootElement = this._shadowRoot.getElementById('root');
             window.addEventListener('resize', this.onResize.bind(this))
             this.onResize();
 
