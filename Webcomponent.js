@@ -4,15 +4,6 @@
        `
         <style>
         /* CSS styles for the widget */
-        #root {
-            width: 200px;
-            height: 100px;
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
-            padding: 10px;
-            box-sizing: border-box;
-            cursor: pointer; /* Add pointer cursor to indicate clickability */
-        }
     
         #content {
             position: absolute;
