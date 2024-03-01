@@ -47,8 +47,7 @@
         }
         
         // neu
-        onCustomWidgetAfterUpdate(event) {
-            const newProperties = event.detail.properties;
+        onCustomWidgetAfterUpdate(changedProperties) {
             // Apply the new properties to the widget
             const widgetStyle = this._shadowRoot.getElementById('shadow-widget-style');
             widgetStyle.innerHTML = `
@@ -58,9 +57,9 @@
                     left: 10px;
                     right: 10px;
                     bottom: 10px;
-                    background-color: ${newProperties.backgroundColor};
-                    color: ${newProperties.textColor};
-                    border: 1px solid ${newProperties.borderColor};
+                    background-color: ${changedProperties.backgroundColor};
+                    color: ${changedProperties.textColor};
+                    border: 1px solid ${changedProperties.borderColor};
                 }
             `;
         }
