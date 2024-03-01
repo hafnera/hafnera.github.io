@@ -43,9 +43,14 @@
             window.addEventListener('resize', this.onResize.bind(this));
             this.onResize();
         }
-
+        
         // neu
-        onPropertiesChanged(event) {
+        onCustomWidgetBeforeUpdate(changedProperties) {
+            this._props = { ...this._props, ...changedProperties };
+        }
+        
+        // neu
+        onCustomWidgetAfterUpdate(event) {
             const newProperties = event.detail.properties;
             // Apply the new properties to the widget
             const widgetStyle = this._shadowRoot.getElementById('shadow-widget-style');
