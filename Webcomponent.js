@@ -49,19 +49,17 @@
         // neu
         onCustomWidgetAfterUpdate(changedProperties) {
             // Apply the new properties to the widget
-            const widgetStyle = this._shadowRoot.getElementById('shadow-widget-style');
-            widgetStyle.innerHTML = `
-                #content {
-                    position: absolute;
-                    top: 10px;
-                    left: 10px;
-                    right: 10px;
-                    bottom: 10px;
-                    background-color: ${changedProperties.backgroundColor};
-                    color: ${changedProperties.textColor};
-                    border: 1px solid ${changedProperties.borderColor};
-                }
-            `;
+            
+            if ("backgroundColor" in changedProperties) {
+                this._backgroundColor = changedProperties["backgroundColor"];
+            }
+            if ("textColor" in changedProperties) {
+                this._textColor = changedProperties["textColor"];
+            }
+            if ("borderColor" in changedProperties) {
+                this._borderColor = changedProperties["borderColor"];
+            }
+            
         }
 
         onResize() {
