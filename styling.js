@@ -52,4 +52,3 @@
 
     customElements.define("com-sap-sample-coloredbox-styling", ColoredBoxStylingPanel)
 })
-etwas
