@@ -50,6 +50,7 @@
         // neu
         onCustomWidgetAfterUpdate(changedProperties) {
             // Apply the new properties to the widget
+            console.log('AfterUpdate() called');
             
             if ("backgroundColor" in changedProperties) {
                 this._backgroundColor = changedProperties["backgroundColor"];
