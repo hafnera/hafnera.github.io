@@ -2,25 +2,27 @@
     let template = document.createElement("template");
     template.innerHTML = `
                             <form id="form">
-                            <fieldset>
-                            <legend>Colored Box Properties</legend>
-                            <table>
-                            <tr>
-                            <td>Color</td>
-                            <td><input id="styling_color" type="text" size="40"
-                            maxlength="40"></td>
-                            </tr>
-                            </table>
-                            <input type="submit" style="display:none;">
-                            </fieldset>
+                                <fieldset>
+                                <legend>Colored Box Properties</legend>
+                                    <table>
+                                        <tr>
+                                            <td>Color</td>
+                                            <td><input id="styling_color" type="text" size="40"
+                                            maxlength="40"></td>
+                                        </tr>
+                                    </table>
+                                <input type="submit" style="display:none;">
+                                </fieldset>
                             </form>
+                            
                             <style>
-                            :host {
-                            display: block;
-                            padding: 1em 1em 1em 1em;
-                            }
+                                :host {
+                                display: block;
+                                padding: 1em 1em 1em 1em;
+                                }
                             </style>
                         `;
+    
     class ColoredBoxStylingPanel extends HTMLElement {
         constructor() {
             super();
