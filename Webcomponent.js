@@ -1,7 +1,7 @@
 (function () {
     let tmpl = document.createElement('template');
     tmpl.innerHTML =
-       `
+        `
         <style>
         /* CSS styles for the widget */
     
@@ -36,9 +36,31 @@
             this._shadowRoot = this.attachShadow({ mode: 'open' });
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
 
+            // neu
+            this.addEventListener('propertiesChanged', this.onPropertiesChanged.bind(this));
+
             // Füge Event-Listener für das Resize-Ereignis hinzu
             window.addEventListener('resize', this.onResize.bind(this));
             this.onResize();
+        }
+
+        // neu
+        onPropertiesChanged(event) {
+            const newProperties = event.detail.properties;
+            // Apply the new properties to the widget
+            const widgetStyle = this._shadowRoot.getElementById('shadow-widget-style');
+            widgetStyle.innerHTML = `
+                #content {
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    right: 10px;
+                    bottom: 10px;
+                    background-color: ${newProperties.backgroundColor};
+                    color: ${newProperties.textColor};
+                    border: 1px solid ${newProperties.borderColor};
+                }
+            `;
         }
 
         onResize() {
@@ -47,8 +69,8 @@
             const contentElement = this._shadowRoot.getElementById('content');
             const rootWidth = rootElement.clientWidth;
             const rootHeight = rootElement.clientHeight;
-            contentElement.style.width = `${rootWidth - 20}px`; 
-            contentElement.style.height = `${rootHeight - 20}px`; 
+            contentElement.style.width = `${rootWidth - 20}px`;
+            contentElement.style.height = `${rootHeight - 20}px`;
         }
     }
 
