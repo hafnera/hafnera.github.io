@@ -35,7 +35,8 @@
             // Erstelle die Schattenwurzel und füge das Template hinzu
             this._shadowRoot = this.attachShadow({ mode: 'open' });
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
-
+            this._props = {};
+            
             // Füge Event-Listener für das Resize-Ereignis hinzu
             window.addEventListener('resize', this.onResize.bind(this));
             this.onResize();
