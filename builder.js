@@ -1,26 +1,27 @@
 (function () {
     let template = document.createElement("template");
     template.innerHTML = `
-    <form id="form">
-    <fieldset>
-    <legend>Colored Box Properties</legend>
-    <table>
-    <tr>
-    <td>Opacity</td>
-    <td><input id="builder_opacity" type="text" size="5"
-    maxlength="5"></td>
-    </tr>
-    </table>
-    <input type="submit" style="display:none;">
-    </fieldset>
-    </form>
-    <style>
-    :host {
-    display: block;
-    padding: 1em 1em 1em 1em;
-    }
-    </style>
-    `;
+                            <form id="form">
+                                <fieldset>
+                                    <legend>Colored Box Properties</legend>
+                                        <table>
+                                            <tr>
+                                                <td>Opacity</td>
+                                                <td><input id="builder_opacity" type="text" size="5"
+                                                maxlength="5"></td>
+                                            </tr>
+                                        </table>
+                                    <input type="submit" style="display:none;">
+                                </fieldset>
+                            </form>
+                            
+                            <style>
+                                :host {
+                                display: block;
+                                padding: 1em 1em 1em 1em;
+                                }
+                            </style>
+                        `;
     class ColoredBoxBuilderPanel extends HTMLElement {
         constructor() {
             super();
