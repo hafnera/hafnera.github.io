@@ -70,5 +70,5 @@
         }
     }
 
-    customElements.define("widget-styling-panel", WidgetStylingPanel);
+    customElements.define("shadow-widget-style", WidgetStylingPanel);
 })();
