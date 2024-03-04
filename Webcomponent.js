@@ -54,9 +54,6 @@
             if ("backgroundColor" in changedProperties) {
                 this._updateBackgroundColor(changedProperties.backgroundColor);
             }
-            if ("textColor" in changedProperties) {
-                this._updateTextColor(changedProperties.textColor);
-            }
             if ("borderColor" in changedProperties) {
                 this._updateBorderColor(changedProperties.borderColor);
             }
@@ -67,11 +64,6 @@
         _updateBackgroundColor(color) {
             const widget = this._shadowRoot.querySelector('#content');
             widget.style.backgroundColor = color;
-        }
-
-        _updateTextColor(color) {
-            const widget = this._shadowRoot.querySelector('#content');
-            widget.style.color = color;
         }
 
         _updateBorderColor(color) {
