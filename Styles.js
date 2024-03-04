@@ -11,10 +11,6 @@
                         <td><input id="background_color" type="color"></td>
                     </tr>
                     <tr>
-                        <td>Text Color</td>
-                        <td><input id="text_color" type="color"></td>
-                    </tr>
-                    <tr>
                         <td>Border Color</td>
                         <td><input id="border_color" type="color"></td>
                     </tr>
@@ -39,7 +35,6 @@
                 detail: {
                     properties: {
                         backgroundColor: this.backgroundColor,
-                        textColor: this.textColor,
                         borderColor: this.borderColor
                     }
                 }
@@ -52,14 +47,6 @@
 
         get backgroundColor() {
             return this._shadowRoot.getElementById("background_color").value;
-        }
-
-        set textColor(color) {
-            this._shadowRoot.getElementById("text_color").value = color;
-        }
-
-        get textColor() {
-            return this._shadowRoot.getElementById("text_color").value;
         }
 
         set borderColor(color) {
