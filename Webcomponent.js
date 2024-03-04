@@ -65,17 +65,17 @@
 
         // neu
         _updateBackgroundColor(color) {
-            const widget = this._shadowRoot.querySelector('content');
+            const widget = this._shadowRoot.querySelector('#content');
             widget.style.backgroundColor = color;
         }
 
         _updateTextColor(color) {
-            const widget = this._shadowRoot.querySelector('content');
+            const widget = this._shadowRoot.querySelector('#content');
             widget.style.color = color;
         }
 
         _updateBorderColor(color) {
-            const widget = this._shadowRoot.querySelector('content');
+            const widget = this._shadowRoot.querySelector('#content');
             widget.style.borderColor = color;
         }
 
