@@ -7,19 +7,19 @@
                 <legend>Widget Styling Properties</legend>
                 <table>
                     <tr>
-                        <td>Shadow Size</td>
-                        <td><input id="shadow_size" type="number" min="0" step="1"></td>
+                        <td>Background Color</td>
+                        <td><input id="background_color" type="color"></td>
                     </tr>
                     <tr>
-                        <td>Shadow Darkness</td>
-                        <td><input id="shadow_darkness" type="range" min="0" max="1" step="0.1"></td>
+                        <td>Text Color</td>
+                        <td><input id="text_color" type="color"></td>
                     </tr>
                     <tr>
-                        <td>Shadow Radius</td>
-                        <td><input id="shadow_radius" type="number" min="0" step="1"></td>
+                        <td>Border Color</td>
+                        <td><input id="border_color" type="color"></td>
                     </tr>
                 </table>
-                <input type="submit" value="Submit">
+                <input type="submit" style="display:none;">
             </fieldset>
         </form>
     `;
@@ -33,40 +33,41 @@
         }
 
         _submit(e) {
+            console.log('submit() called');
             e.preventDefault();
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: {
-                        shadowSize: this.shadowSize,
-                        shadowDarkness: this.shadowDarkness,
-                        shadowRadius: this.shadowRadius
+                        backgroundColor: this.backgroundColor,
+                        textColor: this.textColor,
+                        borderColor: this.borderColor
                     }
                 }
             }));
         }
 
-        set shadowSize(size) {
-            this._shadowRoot.getElementById("shadow_size").value = size;
+        set backgroundColor(color) {
+            this._shadowRoot.getElementById("background_color").value = color;
         }
 
-        get shadowSize() {
-            return this._shadowRoot.getElementById("shadow_size").value;
+        get backgroundColor() {
+            return this._shadowRoot.getElementById("background_color").value;
         }
 
-        set shadowDarkness(darkness) {
-            this._shadowRoot.getElementById("shadow_darkness").value = darkness;
+        set textColor(color) {
+            this._shadowRoot.getElementById("text_color").value = color;
         }
 
-        get shadowDarkness() {
-            return this._shadowRoot.getElementById("shadow_darkness").value;
+        get textColor() {
+            return this._shadowRoot.getElementById("text_color").value;
         }
 
-        set shadowRadius(radius) {
-            this._shadowRoot.getElementById("shadow_radius").value = radius;
+        set borderColor(color) {
+            this._shadowRoot.getElementById("border_color").value = color;
         }
 
-        get shadowRadius() {
-            return this._shadowRoot.getElementById("shadow_radius").value;
+        get borderColor() {
+            return this._shadowRoot.getElementById("border_color").value;
         }
     }
 
