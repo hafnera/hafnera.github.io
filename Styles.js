@@ -19,7 +19,7 @@
                         <td><input id="border_color" type="color"></td>
                     </tr>
                 </table>
-                <input type="submit" style="display:none;">
+                <input type="submit" value="Submit">
             </fieldset>
         </form>
     `;
