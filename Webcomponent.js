@@ -35,34 +35,51 @@
             // Erstelle die Schattenwurzel und füge das Template hinzu
             this._shadowRoot = this.attachShadow({ mode: 'open' });
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            this._props = {};
-            
+
             // Füge Event-Listener für das Resize-Ereignis hinzu
             window.addEventListener('resize', this.onResize.bind(this));
             this.onResize();
         }
-        
+
         // neu
         onCustomWidgetBeforeUpdate(changedProperties) {
             this._props = { ...this._props, ...changedProperties };
         }
-        
+
         // neu
         onCustomWidgetAfterUpdate(changedProperties) {
             // Apply the new properties to the widget
             console.log('AfterUpdate() called');
-            
+
             if ("backgroundColor" in changedProperties) {
-                this._backgroundColor = changedProperties["backgroundColor"];
+                this._updateBackgroundColor(changedProperties.backgroundColor);
             }
             if ("textColor" in changedProperties) {
-                this._textColor = changedProperties["textColor"];
+                this._updateTextColor(changedProperties.textColor);
             }
             if ("borderColor" in changedProperties) {
-                this._borderColor = changedProperties["borderColor"];
+                this._updateBorderColor(changedProperties.borderColor);
             }
-            
+
         }
+
+        // neu
+        _updateBackgroundColor(color) {
+            const widget = this._shadowRoot.querySelector('shadow-widget');
+            widget.style.backgroundColor = color;
+        }
+
+        _updateTextColor(color) {
+            const widget = this._shadowRoot.querySelector('shadow-widget');
+            widget.style.color = color;
+        }
+
+        _updateBorderColor(color) {
+            const widget = this._shadowRoot.querySelector('shadow-widget');
+            widget.style.borderColor = color;
+        }
+
+
 
         onResize() {
             console.log('Window has been resized!');
