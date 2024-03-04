@@ -11,6 +11,7 @@
             left: 10px;
             right: 10px;
             bottom: 10px;
+            border: 2px solid blue
             background-color: rgba(255, 255, 255, 0.0);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
