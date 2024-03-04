@@ -51,36 +51,33 @@
             // Apply the new properties to the widget
             console.log('AfterUpdate() called');
 
-            if ("shadowSize" in changedProperties) {
-                this._updateShadowSize(changedProperties.shadowSize);
+            if ("backgroundColor" in changedProperties) {
+                this._updateBackgroundColor(changedProperties.backgroundColor);
             }
-            if ("shadowDarkness" in changedProperties) {
-                this._updateShadowDarkness(changedProperties.shadowDarkness);
+            if ("textColor" in changedProperties) {
+                this._updateTextColor(changedProperties.textColor);
             }
-            if ("shadowRadius" in changedProperties) {
-                this._updateShadowRadius(changedProperties.shadowRadius);
+            if ("borderColor" in changedProperties) {
+                this._updateBorderColor(changedProperties.borderColor);
             }
-            
+
         }
 
         // neu
-       _updateShadowSize(size) {
-            const contentElement = this._shadowRoot.querySelector('#content');
-            contentElement.style.boxShadow = `${size}px ${size}px ${size}px rgba(0, 0, 0, 0.5)`;
-        }
-        
-        _updateShadowDarkness(darkness) {
-            const contentElement = this._shadowRoot.querySelector('#content');
-            const boxShadow = contentElement.style.boxShadow.split(" ");
-            boxShadow[3] = `rgba(0, 0, 0, ${darkness})`;
-            contentElement.style.boxShadow = boxShadow.join(" ");
-        }
-        
-        _updateShadowRadius(radius) {
-            const contentElement = this._shadowRoot.querySelector('#content');
-            contentElement.style.borderRadius = `${radius}px`;
+        _updateBackgroundColor(color) {
+            const widget = this._shadowRoot.querySelector('#content');
+            widget.style.backgroundColor = color;
         }
 
+        _updateTextColor(color) {
+            const widget = this._shadowRoot.querySelector('#content');
+            widget.style.color = color;
+        }
+
+        _updateBorderColor(color) {
+            const widget = this._shadowRoot.querySelector('#content');
+            widget.style.borderColor = color;
+        }
 
 
 
