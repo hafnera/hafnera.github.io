@@ -17,7 +17,7 @@
                     <tr>
                         <td>Blur</td>
                         <label>
-                        <td><type="range" min="0" max="1" step="0.05" value="0.5" input id="blur"></td>
+                        <td><input type="range" min="0" max="1" step="0.05" value="0.5" input id="blur"></td>
                         </label>
                     </tr>
                     <tr>
