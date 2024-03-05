@@ -11,12 +11,11 @@
                         <td>Background Color</td>
                         <td><input id="background_color" type="color"></td>
                     </tr>
-                    <!--
+                    
                     <tr>
                         <td>Opacity</td>
                         <td><input id="opacity" type="number" min="0" max="1" step="0.1"></td>
                     </tr>
-                    -->
                     
                     <tr>
                         <td>Blur</td>
@@ -45,20 +44,18 @@
             document.querySelector('shadow-widget').dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: {
-                        //backgroundColor: this.backgroundColor,
-                        //opacity: this.opacity,
+                        opacity: this.opacity,
                         blur: this.blur
                     }
                 }
             }));
+            
             /*
+            // change background color
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: {
-                        backgroundColor: this.backgroundColor,
-                        //borderColor: this.borderColor,
-                        //blur: this.blur,
-                        //opacity: this.opacity
+                        backgroundColor: this.backgroundColor
                     }
                 }
             }));
