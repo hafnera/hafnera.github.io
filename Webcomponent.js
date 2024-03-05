@@ -43,7 +43,7 @@
             // Füge Event-Listener für das Resize-Ereignis hinzu
             window.addEventListener('resize', this.onResize.bind(this));
 
-            document.addEventListener('propertiesChanged', this.onPropertiesChanged.bind(this));
+            tmpl.addEventListener('propertiesChanged', this.onPropertiesChanged.bind(this));
 
             this.onResize();
         }
