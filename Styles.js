@@ -14,7 +14,7 @@
                     
                     <tr>
                         <td>Opacity</td>
-                        <td><input id="opacity" type="number" min="0" max="1" step="0.1"></td>
+                        <td><input type="range" min="0" max="1" step="0.05" value="0.5" input id="opacity"></td>
                     </tr>
                     
                     <tr>
