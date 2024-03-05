@@ -42,7 +42,7 @@
             // Füge Event-Listener für das Resize-Ereignis hinzu
             window.addEventListener('resize', this.onResize.bind(this));
 
-            window.addEventListener('propertiesChanged', this.onPropertiesChanged.bind(this));
+            document.addEventListener('propertiesChanged', this.onPropertiesChanged.bind(this));
 
             this.onResize();
         }
@@ -84,7 +84,7 @@
             widget.style.backdropFilter = `blur(${blur}px)`;
         }
 
-        onPropertiesChanged(event) {
+        onPropertiesChanged() {
             const { blur } = event.detail.properties;
             this._updateBlur(blur);
         }
