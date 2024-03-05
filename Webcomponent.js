@@ -48,6 +48,12 @@
             this.onResize();
         }
         
+        onPropertiesChanged(changedProperties) {
+            console.log('onPropertiesChanged() called');
+            const { blur } = changedProperties.detail.properties;
+            this._updateBlur(blur);
+        }
+        
         onCustomWidgetBeforeUpdate(changedProperties) {
             this._props = { ...this._props, ...changedProperties };
         }
@@ -83,12 +89,6 @@
             const widget = this._shadowRoot.querySelector('#content');
             widget.style.webkitBackdropFilter = `blur(${blur}px)`;
             widget.style.backdropFilter = `blur(${blur}px)`;
-        }
-
-        onPropertiesChanged(changedProperties) {
-            console.log('onPropertiesChanged() called');
-            const { blur } = event.detail.properties;
-            this._updateBlur(blur);
         }
         
         onResize() {
