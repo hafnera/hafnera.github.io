@@ -16,7 +16,7 @@
                     </tr>
                     <tr>
                         <td>Blur</td>
-                        <td><input id="blur" type="number" min="0" max="20"></td>
+                        <td><type="range" min="0" max="1" step="0.05" value="0.5" input id="blur"></td>
                     </tr>
                     <tr>
                         <td>Opacity</td>
@@ -45,7 +45,7 @@
                         //backgroundColor: this.backgroundColor,
                         //borderColor: this.borderColor,
                         blur: this.blur,
-                        opacity: this.opacity
+                        //opacity: this.opacity
                     }
                 }
             }));
