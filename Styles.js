@@ -6,7 +6,7 @@
             <fieldset>
                 <legend>Widget Styling Properties</legend>
                 <table>
-                    /*
+                    <!--
                     <tr>
                         <td>Background Color</td>
                         <td><input id="background_color" type="color"></td>
@@ -23,7 +23,7 @@
                         <td><input type="range" min="0" max="1" step="0.05" value="0.5" input id="blur"></td>
                         </label>
                     </tr>
-            
+                    -->
                 </table>
                 <input type="submit" value="Submit">
             </fieldset>
