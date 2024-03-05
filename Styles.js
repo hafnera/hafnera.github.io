@@ -42,7 +42,7 @@
         _submit(e) {
             console.log('submit() called');
             e.preventDefault();
-            shadowWidget.dispatchEvent(new CustomEvent("propertiesChanged", {
+            document.querySelector('shadow-widget').dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: {
                         //backgroundColor: this.backgroundColor,
