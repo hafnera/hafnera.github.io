@@ -64,7 +64,6 @@
             }
             if ("blur" in changedProperties) {
                 this._updateBlur(changedProperties.blur);
-                this.onPropertiesChanged();
             }
             
         }
@@ -84,9 +83,10 @@
             const widget = this._shadowRoot.querySelector('#content');
             widget.style.webkitBackdropFilter = `blur(${blur}px)`;
             widget.style.backdropFilter = `blur(${blur}px)`;
+            widget,style.
         }
 
-        onPropertiesChanged() {
+        onPropertiesChanged(event) {
             console.log('onPropertiesChanged() called');
             const { blur } = event.detail.properties;
             this._updateBlur(blur);
