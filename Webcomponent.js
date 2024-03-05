@@ -64,6 +64,7 @@
             }
             if ("blur" in changedProperties) {
                 this._updateBlur(changedProperties.blur);
+                this.onPropertiesChanged();
             }
             
         }
