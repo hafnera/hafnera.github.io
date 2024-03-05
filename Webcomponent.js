@@ -83,7 +83,6 @@
             const widget = this._shadowRoot.querySelector('#content');
             widget.style.webkitBackdropFilter = `blur(${blur}px)`;
             widget.style.backdropFilter = `blur(${blur}px)`;
-            widget,style.
         }
 
         onPropertiesChanged(event) {
