@@ -43,13 +43,11 @@
             window.addEventListener('resize', this.onResize.bind(this));
             this.onResize();
         }
-
-        // neu
+        
         onCustomWidgetBeforeUpdate(changedProperties) {
             this._props = { ...this._props, ...changedProperties };
         }
 
-        // neu
         onCustomWidgetAfterUpdate(changedProperties) {
             // Apply the new properties to the widget
             console.log('AfterUpdate() called');
@@ -60,10 +58,14 @@
             if ("borderColor" in changedProperties) {
                 this._updateBorderColor(changedProperties.borderColor);
             }
-
+            if ("blur" in changedProperties) {
+                this._updateBlur(changedProperties.blur);
+            }
+            if ("opacity" in changedProperties) {
+                this._updateOpacity(changedProperties.opacity);
+            }
         }
 
-        // neu
         _updateBackgroundColor(color) {
             const widget = this._shadowRoot.querySelector('#content');
             widget.style.backgroundColor = color;
@@ -73,9 +75,19 @@
             const widget = this._shadowRoot.querySelector('#content');
             widget.style.borderColor = color;
         }
+        
+        _updateBlur(blur) {
+            const widget = this._shadowRoot.querySelector('#content');
+            widget.style.webkitBackdropFilter = `blur(${blur}px)`;
+            widget.style.backdropFilter = `blur(${blur}px)`;
+        }
 
-
-
+        _updateOpacity(opacity) {
+            const widget = this._shadowRoot.querySelector('#content');
+            const backgroundColor = widget.style.backgroundColor.replace(/\d?\.?\d*\s*\)\s*$/, `${opacity})`);
+            widget.style.backgroundColor = backgroundColor;
+        }
+        
         onResize() {
             console.log('Window has been resized!');
             const rootElement = this._shadowRoot.getElementById('root');
