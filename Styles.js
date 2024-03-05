@@ -6,12 +6,12 @@
             <fieldset>
                 <legend>Widget Styling Properties</legend>
                 <table>
-                    <!--
+                    
                     <tr>
                         <td>Background Color</td>
                         <td><input id="background_color" type="color"></td>
                     </tr>
-                    
+                    <!--
                     <tr>
                         <td>Opacity</td>
                         <td><input id="opacity" type="number" min="0" max="1" step="0.1"></td>
@@ -45,7 +45,7 @@
             document.querySelector('shadow-widget').dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: {
-                        //backgroundColor: this.backgroundColor,
+                        backgroundColor: this.backgroundColor,
                         //opacity: this.opacity,
                         blur: this.blur
                     }
