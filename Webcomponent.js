@@ -16,7 +16,6 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255,255,255,0.25);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            opacity: 1;
         }
         </style>
         
@@ -87,7 +86,7 @@
         
          _updateOpacity(opacity) {
             const widget = this._shadowRoot.querySelector('#content');
-            widget.style.backgroundColor = opacity;
+            widget.style.backgroundColor = rgba(255, 255, 255, ${opacity});
         }
         
         _updateBlur(blur) {
