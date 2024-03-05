@@ -6,24 +6,24 @@
             <fieldset>
                 <legend>Widget Styling Properties</legend>
                 <table>
+                    /*
                     <tr>
                         <td>Background Color</td>
                         <td><input id="background_color" type="color"></td>
                     </tr>
+                    
                     <tr>
-                        <td>Border Color</td>
-                        <td><input id="border_color" type="color"></td>
+                        <td>Opacity</td>
+                        <td><input id="opacity" type="number" min="0" max="1" step="0.1"></td>
                     </tr>
+                    */
                     <tr>
                         <td>Blur</td>
                         <label>
                         <td><input type="range" min="0" max="1" step="0.05" value="0.5" input id="blur"></td>
                         </label>
                     </tr>
-                    <tr>
-                        <td>Opacity</td>
-                        <td><input id="opacity" type="number" min="0" max="1" step="0.1"></td>
-                    </tr>
+            
                 </table>
                 <input type="submit" value="Submit">
             </fieldset>
@@ -44,10 +44,9 @@
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: {
-                        backgroundColor: this.backgroundColor,
-                        //borderColor: this.borderColor,
-                        blur: this.blur,
-                        //opacity: this.opacity
+                        //backgroundColor: this.backgroundColor,
+                        //opacity: this.opacity,
+                        blur: this.blur
                     }
                 }
             }));
@@ -59,14 +58,6 @@
 
         get backgroundColor() {
             return this._shadowRoot.getElementById("background_color").value;
-        }
-
-        set borderColor(color) {
-            this._shadowRoot.getElementById("border_color").value = color;
-        }
-
-        get borderColor() {
-            return this._shadowRoot.getElementById("border_color").value;
         }
 
         set blur(value) {
