@@ -85,7 +85,7 @@
             widget.style.backdropFilter = `blur(${blur}px)`;
         }
 
-        onPropertiesChanged(event) {
+        onPropertiesChanged(changedProperties) {
             console.log('onPropertiesChanged() called');
             const { blur } = event.detail.properties;
             this._updateBlur(blur);
