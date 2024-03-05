@@ -48,9 +48,9 @@
             this.onResize();
         }
         
-        onPropertiesChanged(changedProperties) {
+        onPropertiesChanged(event) {
             console.log('onPropertiesChanged() called');
-            const { blur } = changedProperties.detail.properties;
+            const { blur } = event.detail.properties;
             this._updateBlur(blur);
         }
         
