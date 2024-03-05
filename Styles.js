@@ -42,8 +42,8 @@
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: {
-                        backgroundColor: this.backgroundColor,
-                        borderColor: this.borderColor,
+                        //backgroundColor: this.backgroundColor,
+                        //borderColor: this.borderColor,
                         blur: this.blur,
                         opacity: this.opacity
                     }
