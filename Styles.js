@@ -14,6 +14,14 @@
                         <td>Border Color</td>
                         <td><input id="border_color" type="color"></td>
                     </tr>
+                    <tr>
+                        <td>Blur</td>
+                        <td><input id="blur" type="number" min="0" max="20"></td>
+                    </tr>
+                    <tr>
+                        <td>Opacity</td>
+                        <td><input id="opacity" type="number" min="0" max="1" step="0.1"></td>
+                    </tr>
                 </table>
                 <input type="submit" value="Submit">
             </fieldset>
@@ -35,7 +43,9 @@
                 detail: {
                     properties: {
                         backgroundColor: this.backgroundColor,
-                        borderColor: this.borderColor
+                        borderColor: this.borderColor,
+                        blur: this.blur,
+                        opacity: this.opacity
                     }
                 }
             }));
@@ -55,6 +65,22 @@
 
         get borderColor() {
             return this._shadowRoot.getElementById("border_color").value;
+        }
+
+        set blur(value) {
+            this._shadowRoot.getElementById("blur").value = value;
+        }
+
+        get blur() {
+            return this._shadowRoot.getElementById("blur").value;
+        }
+
+        set opacity(value) {
+            this._shadowRoot.getElementById("opacity").value = value;
+        }
+
+        get opacity() {
+            return this._shadowRoot.getElementById("opacity").value;
         }
     }
 
