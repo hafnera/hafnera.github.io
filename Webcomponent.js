@@ -11,8 +11,10 @@
             left: 10px;
             right: 10px;
             bottom: 10px;
-            border-color: red;
-            background-color: rgba(255, 255, 255, 0.0);
+            background-color: rgba(255, 255, 255, 0.5);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.25);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
         </style>
