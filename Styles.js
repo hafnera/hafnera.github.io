@@ -16,14 +16,15 @@
                         <td>Opacity</td>
                         <td><input id="opacity" type="number" min="0" max="1" step="0.1"></td>
                     </tr>
-                    */
+                    -->
+                    
                     <tr>
                         <td>Blur</td>
                         <label>
                         <td><input type="range" min="0" max="1" step="0.05" value="0.5" input id="blur"></td>
                         </label>
                     </tr>
-                    -->
+                   
                 </table>
                 <input type="submit" value="Submit">
             </fieldset>
