@@ -41,6 +41,9 @@
 
             // Füge Event-Listener für das Resize-Ereignis hinzu
             window.addEventListener('resize', this.onResize.bind(this));
+
+            window.addEventListener('propertiesChanged', this.onPropertiesChanged.bind(this));
+
             this.onResize();
         }
         
@@ -55,25 +58,24 @@
             if ("backgroundColor" in changedProperties) {
                 this._updateBackgroundColor(changedProperties.backgroundColor);
             }
-            if ("borderColor" in changedProperties) {
-                this._updateBorderColor(changedProperties.borderColor);
+            if ("opacity" in changedProperties) {
+                this._updateOpacity(changedProperties.opacity);
             }
             if ("blur" in changedProperties) {
                 this._updateBlur(changedProperties.blur);
             }
-            if ("opacity" in changedProperties) {
-                this._updateOpacity(changedProperties.opacity);
-            }
+            
         }
 
         _updateBackgroundColor(color) {
             const widget = this._shadowRoot.querySelector('#content');
             widget.style.backgroundColor = color;
         }
-
-        _updateBorderColor(color) {
+        
+         _updateOpacity(opacity) {
             const widget = this._shadowRoot.querySelector('#content');
-            widget.style.borderColor = color;
+            const backgroundColor = widget.style.backgroundColor.replace(/\d?\.?\d*\s*\)\s*$/, `${opacity})`);
+            widget.style.backgroundColor = backgroundColor;
         }
         
         _updateBlur(blur) {
@@ -82,10 +84,9 @@
             widget.style.backdropFilter = `blur(${blur}px)`;
         }
 
-        _updateOpacity(opacity) {
-            const widget = this._shadowRoot.querySelector('#content');
-            const backgroundColor = widget.style.backgroundColor.replace(/\d?\.?\d*\s*\)\s*$/, `${opacity})`);
-            widget.style.backgroundColor = backgroundColor;
+        onPropertiesChanged(event) {
+            const { blur } = event.detail.properties;
+            this._updateBlur(blur);
         }
         
         onResize() {
