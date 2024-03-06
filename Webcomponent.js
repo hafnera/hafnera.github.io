@@ -53,11 +53,11 @@
             const { blur } = event.detail.properties;
             this._updateBlur(blur);
             console.log('blur updated');
-            /*
+            
             const { opacity } = event.detail.properties;
             this._updateOpacity(opacity);
             console.log('opacity updated');
-            */
+            
         }
         
         onCustomWidgetBeforeUpdate(changedProperties) {
@@ -84,12 +84,12 @@
             const widget = this._shadowRoot.querySelector('#content');
             widget.style.backgroundColor = color;
         }
-        /*
+        
          _updateOpacity(opacity) {
             const widget = this._shadowRoot.querySelector('#content');
-            widget.style.backgroundColor = rgba(255, 255, 255, ${opacity});
+            widget.style.backgroundColor = 'rgba(255, 255, 255, ${opacity})';
         }
-        */
+        
         _updateBlur(blur) {
             const widget = this._shadowRoot.querySelector('#content');
             widget.style.webkitBackdropFilter = `blur(${blur}px)`;
