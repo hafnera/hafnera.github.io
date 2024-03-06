@@ -87,8 +87,9 @@
         
          _updateOpacity(opacity) {
             const widget = this._shadowRoot.querySelector('#content');
-            widget.style.backgroundColor = 'rgba(255, 255, 255, ${opacity})';
+            widget.style.opacity = opacity;
         }
+
         
         _updateBlur(blur) {
             const widget = this._shadowRoot.querySelector('#content');
