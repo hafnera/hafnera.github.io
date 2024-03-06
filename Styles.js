@@ -22,6 +22,12 @@
                         <td><input type="range" min="0" max="50" step="2.5" value="25" input id="blur"></td>
                     </tr>
 
+                    <tr>
+                        <td>Border Radius</td>
+                        <label>
+                        <td><input type="range" min="0" max="50" step="2.5" value="25" input id="borderRadius"></td>
+                        </label>
+                    </tr>
 
 
                     
@@ -68,6 +74,7 @@
                     properties: {
                         opacity: this.opacity,
                         blur: this.blur,
+                        borderRadius: this.borderRadius
                         shadowDarkness: this.shadowDarkness,
                         shadowSize: this.shadowSize
                     }
@@ -100,6 +107,7 @@
             return this._shadowRoot.getElementById("opacity").value;
         }
 
+        
 
         // neu
         set shadowDarkness(value) {
