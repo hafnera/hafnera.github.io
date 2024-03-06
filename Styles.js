@@ -23,6 +23,13 @@
                         <td><input type="range" min="0" max="50" step="2.5" value="25" input id="blur"></td>
                         </label>
                     </tr>
+
+                    <tr>
+                        <td>Border Radius</td>
+                        <label>
+                        <td><input type="range" min="0" max="50" step="1" value="10" input id="borderRadius"></td>
+                        </label>
+                    </tr>
                    
                 </table>
                 <input type="submit" value="Submit">
@@ -45,7 +52,8 @@
                 detail: {
                     properties: {
                         opacity: this.opacity,
-                        blur: this.blur
+                        blur: this.blur,
+                        border-radius: this.borderRadius
                     }
                 }
             }));
