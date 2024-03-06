@@ -11,13 +11,11 @@
             left: 10px;
             right: 10px;
             bottom: 10px;
-            <!--
             background-color: rgba(255, 255, 255, 0.0);
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255,255,255,0.25);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            -->
         }
         </style>
         
@@ -38,11 +36,11 @@
         }
 
         init() {
-            // Erstelle die Schattenwurzel und füge das Template hinzu
+            // Create the shadow root and add the template
             this._shadowRoot = this.attachShadow({ mode: 'open' });
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
 
-            // Füge Event-Listener für das Resize-Ereignis hinzu
+            // Add event listener for the Resize event
             window.addEventListener('resize', this.onResize.bind(this));
 
             this.addEventListener('propertiesChanged', this.onPropertiesChanged.bind(this));
@@ -58,8 +56,9 @@
 
         onCustomWidgetAfterUpdate(changedProperties) {
             // framework method
-            console.log('AfterUpdate() called');
-
+            console.log('AfterUpdate() called with');
+            console.log(changedProperties.detail.properties);
+            
             if ("backgroundColor" in changedProperties) {
                 this._updateBackgroundColor(changedProperties.backgroundColor);
             }
@@ -69,6 +68,14 @@
             if ("blur" in changedProperties) {
                 this._updateBlur(changedProperties.blur);
             }
+
+            if ("shadowSize" in changedProperties) { // new
+                this.updateShadowSize(changedProperties.shadowSize); // new
+            } // new
+
+            if ("shadowDarkness" in changedProperties) { // new
+                this.updateShadowDarkness(changedProperties.shadowDarkness); // new
+            } // new
 
         }
 
@@ -84,6 +91,12 @@
 
             const { borderRadius } = event.detail.properties;
             this._updateBorderRadius(borderRadius);
+
+            const { shadowSize } = event.detail.properties; // new
+            this.updateShadowSize(shadowSize); // new
+
+            const { shadowDarkness } = event.detail.properties; // new
+            this.updateShadowDarkness(shadowDarkness); // new
         }
 
         // legacy method
@@ -109,6 +122,16 @@
             widget.style.boxShadow = `0 0 10px rgba(0, 0, 0, 0.5)`;
             widget.style.borderRadius = `${borderRadius}px`;
         }
+
+        updateShadowSize(size) { // new
+            const widget = this._shadowRoot.querySelector('#content'); // new
+            widget.style.boxShadow = `0 0 ${size}px rgba(0, 0, 0, 0.5)`; // new
+        } // new
+
+        updateShadowDarkness(darkness) { // new
+            const widget = this._shadowRoot.querySelector('#content'); // new
+            widget.style.background = `rgba(0, 0, 0, ${darkness})`; // new
+        } // new
 
         onResize() {
             console.log('Window has been resized!');
