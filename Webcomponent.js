@@ -56,8 +56,7 @@
 
         onCustomWidgetAfterUpdate(changedProperties) {
             // framework method
-            console.log('AfterUpdate() called with');
-            console.log(changedProperties.detail.properties);
+            console.log('AfterUpdate() called');
             
             if ("backgroundColor" in changedProperties) {
                 this._updateBackgroundColor(changedProperties.backgroundColor);
