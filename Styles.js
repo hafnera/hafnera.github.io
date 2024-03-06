@@ -50,7 +50,7 @@
                 }
             }));
             
-            /*
+            
             // change background color
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
@@ -59,7 +59,7 @@
                     }
                 }
             }));
-            */
+            
         }
 
         set backgroundColor(color) {
