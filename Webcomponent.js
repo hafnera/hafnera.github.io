@@ -60,7 +60,10 @@
             const { opacity } = event.detail.properties;
             this._updateOpacity(opacity);
             console.log('opacity updated');
-            
+
+            const { borderRadius } = event.detail.properties;
+            this._updateBorderRadius(borderRadius);
+            console.log('borderRadius updated');
         }
         
         onCustomWidgetBeforeUpdate(changedProperties) {
@@ -102,7 +105,11 @@
             widget.style.webkitBackdropFilter = `blur(${blur}px)`;
             widget.style.backdropFilter = `blur(${blur}px)`;
         }
-        
+
+        _updateBorderRadius(borderRadius) {
+            const widget = this._shadowRoot.querySelector('#content');
+            widget.style.borderRadius = borderRadius;
+        }
         onResize() {
             console.log('Window has been resized!');
             const rootElement = this._shadowRoot.getElementById('root');
