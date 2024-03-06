@@ -48,6 +48,7 @@
         _submit(e) {
             console.log('submit() called');
             e.preventDefault();
+            /*
             document.querySelector('shadow-widget').dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: {
@@ -57,7 +58,7 @@
                     }
                 }
             }));
-            
+            */
             
             // change background color
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
