@@ -51,7 +51,8 @@
         }
         
         onPropertiesChanged(event) {
-            console.log('onPropertiesChanged() called');
+            console.log('onPropertiesChanged() called with');
+            console.log(event.detail.properties);
             
             const { blur } = event.detail.properties;
             this._updateBlur(blur);
