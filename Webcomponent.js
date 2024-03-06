@@ -14,8 +14,8 @@
             <!--
             background-color: rgba(255, 255, 255, 0.0);
             -webkit-backdrop-filter: blur(10px);
-            -->
             backdrop-filter: blur(10px);
+            -->
             border: 1px solid rgba(255,255,255,0.25);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
@@ -56,15 +56,12 @@
             
             const { blur } = event.detail.properties;
             this._updateBlur(blur);
-            console.log('blur updated');
             
             const { opacity } = event.detail.properties;
             this._updateOpacity(opacity);
-            console.log('opacity updated');
 
             const { borderRadius } = event.detail.properties;
             this._updateBorderRadius(borderRadius);
-            console.log('borderRadius updated');
         }
         
         onCustomWidgetBeforeUpdate(changedProperties) {
