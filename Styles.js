@@ -27,7 +27,7 @@
                     <tr>
                         <td>Border Radius</td>
                         <label>
-                        <td><input type="range" min="0" max="50" step="1" value="10" input id="borderRadius"></td>
+                        <td><input type="range" min="0" max="50" step="2.5" value="25" input id="borderRadius"></td>
                         </label>
                     </tr>
                    
