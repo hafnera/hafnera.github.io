@@ -25,14 +25,14 @@
 
 
                     
-                    //neu 
+                    
                     <tr>
                         <td>Shadow Darkness</td>
                         <td><input type="range" min="0" max="50" step="2.5" value="25" input id="shadowDarkness"></td>
                     </tr>
                     
                     <tr>
-                        <td>Shadow Size (px)</td>
+                        <td>Shadow Size</td>
                         <td><input type="range" min="0" max="50" step="2.5" value="25" input id="shadowSize"></td>
                     </tr>
                    
@@ -67,8 +67,8 @@
                 detail: {
                     properties: {
                         opacity: this.opacity,
-                        shadowDarkness: this.shadowDarkness,
                         blur: this.blur,
+                        shadowDarkness: this.shadowDarkness,
                         shadowSize: this.shadowSize
                     }
                 }
