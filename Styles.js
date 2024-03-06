@@ -9,7 +9,7 @@
                     
                     <tr>
                         <td>Background Color</td>
-                        <td><input id="background_color" type="text" placeholder="rgba(0, 0, 0, 0.5)"></td>
+                        <td><input id="background_color" type="text" placeholder="rgba(255, 255, 255, 0.0)"></td>
                     </tr>
                     
                     <tr>
