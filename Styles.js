@@ -20,7 +20,7 @@
                     <tr>
                         <td>Blur</td>
                         <label>
-                        <td><input type="number" id="blur" min="0" max="50" step="2.5" value="25"></td>
+                        <td><input type="range" min="0" max="50" step="2.5" value="25" input id="blur"></td>
                         </label>
                     </tr>
                    
