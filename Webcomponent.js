@@ -50,20 +50,6 @@
             this.onResize();
         }
 
-        onPropertiesChanged(event) {
-            console.log('onPropertiesChanged() called with');
-            console.log(event.detail.properties);
-
-            const { blur } = event.detail.properties;
-            this._updateBlur(blur);
-
-            const { opacity } = event.detail.properties;
-            this._updateOpacity(opacity);
-
-            const { borderRadius } = event.detail.properties;
-            this._updateBorderRadius(borderRadius);
-        }
-
         onCustomWidgetBeforeUpdate(changedProperties) {
             // framework method
             console.log('BeforeUpdate() called');
@@ -84,6 +70,20 @@
                 this._updateBlur(changedProperties.blur);
             }
 
+        }
+
+        onPropertiesChanged(event) {
+            console.log('onPropertiesChanged() called with');
+            console.log(event.detail.properties);
+
+            const { blur } = event.detail.properties;
+            this._updateBlur(blur);
+
+            const { opacity } = event.detail.properties;
+            this._updateOpacity(opacity);
+
+            const { borderRadius } = event.detail.properties;
+            this._updateBorderRadius(borderRadius);
         }
 
         // legacy method
