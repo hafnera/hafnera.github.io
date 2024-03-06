@@ -11,11 +11,9 @@
             left: 10px;
             right: 10px;
             bottom: 10px;
-            <!--
             background-color: rgba(255, 255, 255, 0.0);
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
-            -->
             border: 1px solid rgba(255,255,255,0.25);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
@@ -49,21 +47,21 @@
 
             this.onResize();
         }
-        
+
         onPropertiesChanged(event) {
             console.log('onPropertiesChanged() called with');
             console.log(event.detail.properties);
-            
+
             const { blur } = event.detail.properties;
             this._updateBlur(blur);
-            
+
             const { opacity } = event.detail.properties;
             this._updateOpacity(opacity);
 
             const { borderRadius } = event.detail.properties;
             this._updateBorderRadius(borderRadius);
         }
-        
+
         onCustomWidgetBeforeUpdate(changedProperties) {
             // framework method
             console.log('BeforeUpdate() called');
@@ -83,7 +81,7 @@
             if ("blur" in changedProperties) {
                 this._updateBlur(changedProperties.blur);
             }
-            
+
         }
 
         // legacy method
@@ -91,13 +89,13 @@
             const widget = this._shadowRoot.querySelector('#content');
             widget.style.backgroundColor = color;
         }
-        
-         _updateOpacity(opacity) {
+
+        _updateOpacity(opacity) {
             const widget = this._shadowRoot.querySelector('#content');
             widget.style.opacity = opacity;
         }
 
-        
+
         _updateBlur(blur) {
             const widget = this._shadowRoot.querySelector('#content');
             widget.style.webkitBackdropFilter = `blur(${blur}px)`;
@@ -110,7 +108,6 @@
             widget.style.borderRadius = borderRadius;
         }
 
-        }
         onResize() {
             console.log('Window has been resized!');
             const rootElement = this._shadowRoot.getElementById('root');
