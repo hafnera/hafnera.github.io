@@ -49,11 +49,11 @@
         
         onPropertiesChanged(event) {
             console.log('onPropertiesChanged() called');
-            
+            /*
             const { blur } = event.detail.properties;
             this._updateBlur(blur);
             console.log('blur updated');
-            
+            */
             const { opacity } = event.detail.properties;
             this._updateOpacity(opacity);
             console.log('opacity updated');
