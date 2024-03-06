@@ -30,6 +30,7 @@
 
     class PerformanceHelp extends HTMLElement {
         constructor() {
+            console.log('constructor() called');
             super();
             this.init();
         }
@@ -49,11 +50,11 @@
         
         onPropertiesChanged(event) {
             console.log('onPropertiesChanged() called');
-            /*
+            
             const { blur } = event.detail.properties;
             this._updateBlur(blur);
             console.log('blur updated');
-            */
+            
             const { opacity } = event.detail.properties;
             this._updateOpacity(opacity);
             console.log('opacity updated');
@@ -61,11 +62,13 @@
         }
         
         onCustomWidgetBeforeUpdate(changedProperties) {
+            // framework method
+            console.log('BeforeUpdate() called');
             this._props = { ...this._props, ...changedProperties };
         }
 
         onCustomWidgetAfterUpdate(changedProperties) {
-            // Apply the new properties to the widget
+            // framework method
             console.log('AfterUpdate() called');
 
             if ("backgroundColor" in changedProperties) {
@@ -80,6 +83,7 @@
             
         }
 
+        // legacy method
         _updateBackgroundColor(color) {
             const widget = this._shadowRoot.querySelector('#content');
             widget.style.backgroundColor = color;
