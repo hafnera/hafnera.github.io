@@ -106,7 +106,14 @@
         get opacity() {
             return this._shadowRoot.getElementById("opacity").value;
         }
-
+        
+        set borderRadius(value) {
+            this._shadowRoot.getElementById("borderRadius").value = value;
+        }
+    
+        get borderRadius() {
+            return this._shadowRoot.getElementById("borderRadius").value;
+        }
         
 
         // neu
