@@ -16,19 +16,24 @@
                         <td>Opacity</td>
                         <td><input type="range" min="0" max="1" step="0.05" value="0.5" input id="opacity"></td>
                     </tr>
-                    
-                    <tr>
-                        <td>Blur</td>
-                        <label>
-                        <td><input type="range" min="0" max="50" step="2.5" value="25" input id="blur"></td>
-                        </label>
-                    </tr>
 
                     <tr>
-                        <td>Border Radius</td>
-                        <label>
-                        <td><input type="range" min="0" max="50" step="2.5" value="25" input id="borderRadius"></td>
-                        </label>
+                        <td>Blur</td>
+                        <td><input type="range" min="0" max="50" step="2.5" value="25" input id="blur"></td>
+                    </tr>
+
+
+
+                    
+                    //neu 
+                    <tr>
+                        <td>Shadow Darkness</td>
+                        <td><input type="range" min="0" max="50" step="2.5" value="25" input id="shadowDarkness"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Shadow Size (px)</td>
+                        <td><input type="range" min="0" max="50" step="2.5" value="25" input id="shadowSize"></td>
                     </tr>
                    
                 </table>
@@ -62,8 +67,9 @@
                 detail: {
                     properties: {
                         opacity: this.opacity,
+                        shadowDarkness: this.shadowDarkness,
                         blur: this.blur,
-                        borderRadius: this.borderRadius
+                        shadowSize: this.shadowSize
                     }
                 }
             }));
@@ -94,13 +100,24 @@
             return this._shadowRoot.getElementById("opacity").value;
         }
 
-        set borderRadius(value) {
-            this._shadowRoot.getElementById("borderRadius").value = value;
+
+        // neu
+        set shadowDarkness(value) {
+            this._shadowRoot.getElementById("shadowDarkness").value = value;
         }
-    
-        get borderRadius() {
-            return this._shadowRoot.getElementById("borderRadius").value;
+
+        get shadowDarkness() {
+            return this._shadowRoot.getElementById("shadowDarkness").value;
         }
+
+        set shadowSize(value) {
+            this._shadowRoot.getElementById("shadowSize").value = value;
+        }
+
+        get shadowSize() {
+            return this._shadowRoot.getElementById("shadowSize").value;
+        }
+ 
     }
 
     customElements.define("shadow-widget-style", WidgetStylingPanel);
