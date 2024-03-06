@@ -53,7 +53,7 @@
                     properties: {
                         opacity: this.opacity,
                         blur: this.blur,
-                        border-radius: this.borderRadius
+                        borderRadius: this.borderRadius
                     }
                 }
             }));
