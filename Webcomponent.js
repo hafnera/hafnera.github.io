@@ -6,14 +6,13 @@
         /* CSS styles for the widget */
     
         #content {
-            <!--
             position: absolute;
             top: 10px;
             left: 10px;
             right: 10px;
             bottom: 10px;
+            <!--
             background-color: rgba(255, 255, 255, 0.0);
-        
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255,255,255,0.25);
