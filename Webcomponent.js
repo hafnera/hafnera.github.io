@@ -106,7 +106,10 @@
 
         _updateBorderRadius(borderRadius) {
             const widget = this._shadowRoot.querySelector('#content');
+            widget.style.boxShadow = `0 0 10px rgba(0, 0, 0, 0.5)`;
             widget.style.borderRadius = borderRadius;
+        }
+
         }
         onResize() {
             console.log('Window has been resized!');
