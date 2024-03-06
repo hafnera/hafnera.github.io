@@ -14,13 +14,13 @@
                     
                     <tr>
                         <td>Opacity</td>
-                        <td><input type="range" min="0" max="50" step="2.5" value="25" input id="opacity"></td>
+                        <td><input type="range" min="0" max="1" step="0.05" value="0.5" input id="opacity"></td>
                     </tr>
                     
                     <tr>
                         <td>Blur</td>
                         <label>
-                        <td><input type="range" min="0" max="1" step="0.05" value="0.5" input id="blur"></td>
+                        <td><input type="number" id="blur" min="0" max="50" step="2.5" value="25"></td>
                         </label>
                     </tr>
                    
