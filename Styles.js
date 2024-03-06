@@ -48,23 +48,22 @@
         _submit(e) {
             console.log('submit() called');
             e.preventDefault();
-            /*
-            document.querySelector('shadow-widget').dispatchEvent(new CustomEvent("propertiesChanged", {
-                detail: {
-                    properties: {
-                        opacity: this.opacity,
-                        blur: this.blur,
-                        borderRadius: this.borderRadius
-                    }
-                }
-            }));
-            */
             
             // change background color
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: {
                         backgroundColor: this.backgroundColor
+                    }
+                }
+            }));
+            
+            document.querySelector('shadow-widget').dispatchEvent(new CustomEvent("propertiesChanged", {
+                detail: {
+                    properties: {
+                        opacity: this.opacity,
+                        blur: this.blur,
+                        borderRadius: this.borderRadius
                     }
                 }
             }));
