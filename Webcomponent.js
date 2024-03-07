@@ -76,10 +76,10 @@
 
             const { borderRadius } = event.detail.properties;
             this._updateBorderRadius(borderRadius);
-            /*
+        
             const { shadowSize } = event.detail.properties; // new
             this.updateShadowSize(shadowSize); // new
-            */
+        
             const { shadowDarkness } = event.detail.properties; // new
             this.updateShadowDarkness(shadowDarkness); // new
         }
