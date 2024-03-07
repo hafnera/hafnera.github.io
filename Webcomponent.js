@@ -114,11 +114,13 @@
             widget.style.boxShadow = `0 0 ${size}px rgba(0, 0, 0, 0.5)`;
         } 
 
-        updateShadowDarkness(darkness) { // new
-            console.log('updateShadowDarkness() called');
-            const widget = this._shadowRoot.querySelector('#content'); 
-            widget.style.boxShadow = `rgba(0, 0, 0, ${darkness})`;     
-        } 
+        updateShadowDarkness(darkness) {
+            const widget = this._shadowRoot.querySelector('#content');
+            const existingBoxShadow = widget.style.boxShadow;
+            const [xOffset, yOffset, blurRadius, spreadRadius, color] = existingBoxShadow.split(' ');
+            widget.style.boxShadow = `${xOffset} ${yOffset} ${blurRadius} ${spreadRadius} rgba(0, 0, 0, ${darkness})`;
+        }
+
 
 
         onResize() {
