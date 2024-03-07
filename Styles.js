@@ -76,8 +76,8 @@
                         opacity: this.opacity,
                         blur: this.blur,
                         borderRadius: this.borderRadius,
-                        shadowDarkness: this.shadowDarkness,
-                        shadowSize: this.shadowSize
+                        shadowSize: this.shadowSize,
+                        //shadowDarkness: this.shadowDarkness
                     }
                 }
             }));
@@ -115,16 +115,6 @@
         get borderRadius() {
             return this._shadowRoot.getElementById("borderRadius").value;
         }
-        
-
-        // neu
-        set shadowDarkness(value) {
-            this._shadowRoot.getElementById("shadowDarkness").value = value;
-        }
-
-        get shadowDarkness() {
-            return this._shadowRoot.getElementById("shadowDarkness").value;
-        }
 
         set shadowSize(value) {
             this._shadowRoot.getElementById("shadowSize").value = value;
@@ -133,7 +123,17 @@
         get shadowSize() {
             return this._shadowRoot.getElementById("shadowSize").value;
         }
- 
+
+
+        /*
+        set shadowDarkness(value) {
+            this._shadowRoot.getElementById("shadowDarkness").value = value;
+        }
+
+        get shadowDarkness() {
+            return this._shadowRoot.getElementById("shadowDarkness").value;
+        }
+        */
     }
 
     customElements.define("shadow-widget-style", WidgetStylingPanel);
