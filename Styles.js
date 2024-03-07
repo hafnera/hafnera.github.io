@@ -27,21 +27,22 @@
                         <label>
                         <td><input type="range" min="0" max="50" step="2.5" value="25" input id="borderRadius"></td>
                         </label>
-                    </tr>
-
-
-                    
-                    
-                    <tr>
-                        <td>Shadow Darkness</td>
-                        <td><input type="range" min="0" max="1" step="0.05" value="0.5" input id="shadowDarkness"></td>
-                    </tr>
-                    
+                    </tr>                   
+                                      
                     <tr>
                         <td>Shadow Size</td>
                         <td><input type="range" min="0" max="50" step="2.5" value="25" input id="shadowSize"></td>
                     </tr>
-                   
+
+
+
+                    /*
+                     <tr>
+                        <td>Shadow Darkness</td>
+                        <td><input type="range" min="0" max="1" step="0.05" value="0.5" input id="shadowDarkness"></td>
+                    </tr>
+                    */
+                    
                 </table>
                 <input type="submit" value="Submit">
             </fieldset>
