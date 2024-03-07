@@ -115,9 +115,7 @@
 
         updateShadowDarkness(darkness) { // new
             const widget = this._shadowRoot.querySelector('#content'); 
-            const currentShadow = widget.style.boxShadow; 
-            const updatedShadow = currentShadow.replace(/rgba\(\d+, \d+, \d+, \d+\)/, `rgba(0, 0, 0, ${darkness})`); 
-            widget.style.boxShadow = updatedShadow; 
+            widget.style.boxShadow = `rgba(0, 0, 0, ${darkness}`;     
         } 
 
 
