@@ -115,16 +115,10 @@
         } 
 
         updateShadowDarkness(darkness) {
-            console.log('updateShadowDarkness() called');
             const widget = this._shadowRoot.querySelector('#content');
-            const existingBoxShadow = widget.style.boxShadow;
-            const [xOffset, yOffset, blurRadius, spreadRadius, color] = existingBoxShadow.split(' ');
-            const rgbaColor = color.substring(0, color.lastIndexOf(',')) + `, ${darkness})`;
-            widget.style.boxShadow = `${xOffset} ${yOffset} ${blurRadius} ${spreadRadius} ${rgbaColor}`;
+            const opacity = 1 - darkness; 
+            widget.style.opacity = opacity;
         }
-
-
-
 
         onResize() {
             console.log('Window has been resized!');
