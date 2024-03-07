@@ -79,9 +79,10 @@
         
             const { shadowSize } = event.detail.properties; // new
             this.updateShadowSize(shadowSize); // new
-        
+            /*
             const { shadowDarkness } = event.detail.properties; // new
             this.updateShadowDarkness(shadowDarkness); // new
+            */
         }
 
         _updateBackgroundColor(color) {
@@ -112,7 +113,7 @@
             const widget = this._shadowRoot.querySelector('#content');
             widget.style.boxShadow = `0 0 ${size}px rgba(0, 0, 0, 0.5)`;
         } 
-
+        
         updateShadowDarkness(darkness) {
             const widget = this._shadowRoot.querySelector('#content');
             const existingBoxShadow = widget.style.boxShadow;
