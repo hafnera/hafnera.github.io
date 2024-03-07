@@ -36,12 +36,12 @@
 
 
 
-                    /*
+                    <!-- 
                      <tr>
                         <td>Shadow Darkness</td>
                         <td><input type="range" min="0" max="1" step="0.05" value="0.5" input id="shadowDarkness"></td>
                     </tr>
-                    */
+                    -->
                     
                 </table>
                 <input type="submit" value="Submit">
