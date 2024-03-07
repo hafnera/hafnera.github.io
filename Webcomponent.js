@@ -109,11 +109,13 @@
         }
 
         updateShadowSize(size) { // new
+            console.log('updateShadowSize() called');
             const widget = this._shadowRoot.querySelector('#content');
             widget.style.boxShadow = `0 0 ${size}px rgba(0, 0, 0, 0.5)`;
-        } // new
+        } 
 
         updateShadowDarkness(darkness) { // new
+            console.log('updateShadowDarkness() called');
             const widget = this._shadowRoot.querySelector('#content'); 
             widget.style.boxShadow = `rgba(0, 0, 0, ${darkness})`;     
         } 
