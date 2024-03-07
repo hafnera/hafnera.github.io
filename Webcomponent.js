@@ -61,20 +61,6 @@
             if ("backgroundColor" in changedProperties) {
                 this._updateBackgroundColor(changedProperties.backgroundColor);
             }
-            if ("opacity" in changedProperties) {
-                this._updateOpacity(changedProperties.opacity);
-            }
-            if ("blur" in changedProperties) {
-                this._updateBlur(changedProperties.blur);
-            }
-
-            if ("shadowSize" in changedProperties) { // new
-                this.updateShadowSize(changedProperties.shadowSize); // new
-            } // new
-
-            if ("shadowDarkness" in changedProperties) { // new
-                this.updateShadowDarkness(changedProperties.shadowDarkness); // new
-            } // new
 
         }
 
@@ -123,14 +109,17 @@
         }
 
         updateShadowSize(size) { // new
-            const widget = this._shadowRoot.querySelector('#content'); // new
-            widget.style.boxShadow = `0 0 ${size}px rgba(0, 0, 0, 0.5)`; // new
+            const widget = this._shadowRoot.querySelector('#content');
+            widget.style.boxShadow = `0 0 ${size}px rgba(0, 0, 0, 0.5)`;
         } // new
 
         updateShadowDarkness(darkness) { // new
-            const widget = this._shadowRoot.querySelector('#content'); // new
-            widget.style.background = `rgba(0, 0, 0, ${darkness})`; // new
-        } // new
+            const widget = this._shadowRoot.querySelector('#content'); 
+            const currentShadow = widget.style.boxShadow; 
+            const updatedShadow = currentShadow.replace(/rgba\(\d+, \d+, \d+, \d+\)/, `rgba(0, 0, 0, ${darkness})`); 
+            widget.style.boxShadow = updatedShadow; 
+        } 
+
 
         onResize() {
             console.log('Window has been resized!');
