@@ -74,7 +74,7 @@
                     properties: {
                         opacity: this.opacity,
                         blur: this.blur,
-                        borderRadius: this.borderRadius
+                        borderRadius: this.borderRadius,
                         shadowDarkness: this.shadowDarkness,
                         shadowSize: this.shadowSize
                     }
