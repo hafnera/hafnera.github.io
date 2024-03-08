@@ -16,7 +16,7 @@
             backdrop-filter: blur(50px);
             border: 2px solid rgba(220,220,220,0.25);
             box-shadow: 0 0 10px rgba(30, 30, 30, 0.5);
-            border-radius: 32,5;
+            border-radius: 33;
         }
         </style>
         
