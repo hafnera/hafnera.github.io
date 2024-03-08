@@ -3,23 +3,15 @@
     tmpl.innerHTML =
         `
         <style>
-        /*  This is where the initial appearance of the widget is defined.
-            Note that the changes from the stylingpanel will not be persistent!
-            Therefore if you want to apply changes permanently, you need to 
-            change them here in the #content part of the code
-
             
-        */
-    
         #content {
             position: absolute;
             top: 10px;
             left: 10px;
             right: 10px;
             bottom: 10px;
-            border: 1px solid rgba(255,255,255,1.0);
-
-            
+            border: 1px solid rgba(255,255,255,0.0);
+   
             background-color: rgba(255, 255, 255);
             opacity: 0.25;
             -webkit-backdrop-filter: blur(10px);
@@ -58,7 +50,8 @@
 
             this.onResize();
         }
-
+        
+        /*
         onCustomWidgetBeforeUpdate(changedProperties) {
             // framework method
             console.log('BeforeUpdate() called');
@@ -74,7 +67,8 @@
             }
 
         }
-
+        */
+        
         onPropertiesChanged(event) {
             console.log('onPropertiesChanged() called with');
             console.log(event.detail.properties);
