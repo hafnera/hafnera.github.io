@@ -7,15 +7,15 @@
     
         #content {
             position: absolute;
-            top: 10px;
-            left: 10px;
-            right: 10px;
-            bottom: 10px;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
             background-color: rgba(255, 255, 255, 0.0);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.25);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            -webkit-backdrop-filter: blur(50px);
+            backdrop-filter: blur(50px);
+            border: 2px solid rgba(220,220,220,0.25);
+            box-shadow: 0 0 10px rgba(20, 20, 20, 0.5);
         }
         </style>
         
