@@ -24,7 +24,7 @@
             opacity: 0.25;
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
-            border-radius: 0;
+            border-radius: 25;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             
         }
