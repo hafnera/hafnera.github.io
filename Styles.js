@@ -36,7 +36,7 @@
 
 
 
-                    <!-- 
+                    <!-- disabled because the effect is applied by the opacity property
                      <tr>
                         <td>Shadow Darkness</td>
                         <td><input type="range" min="0" max="1" step="0.05" value="0.5" input id="shadowDarkness"></td>
@@ -62,6 +62,7 @@
             e.preventDefault();
             
             // change background color
+            // this is done using the framework like it is described in the Developer Guide
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: {
@@ -69,9 +70,14 @@
                     }
                 }
             }));
-            
+
+            // this is a workaround, because it didn't work the "framework way"
+            // To still apply changes a CostumEvent is explicitly directed to the main webcomponent using
+            // the querySelector('shadow-widget')
             document.querySelector('shadow-widget').dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
+                    // note that every of those this statements implicitly calls the getter methods
+                    // you can see below
                     properties: {
                         opacity: this.opacity,
                         blur: this.blur,
