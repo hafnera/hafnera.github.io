@@ -64,39 +64,43 @@
             }
 
         }
-
+        
         onPropertiesChanged(event) {
             console.log('onPropertiesChanged() called with');
             console.log(event.detail.properties);
 
-            const { blur } = event.detail.properties;
-            this._updateBlur(blur);
-
             const { opacity } = event.detail.properties;
             this._updateOpacity(opacity);
+
+            const { blur } = event.detail.properties;
+            this._updateBlur(blur);
 
             const { borderRadius } = event.detail.properties;
             this._updateBorderRadius(borderRadius);
         
             const { shadowSize } = event.detail.properties; // new
             this.updateShadowSize(shadowSize); // new
-        
+            /*
             const { shadowDarkness } = event.detail.properties; // new
             this.updateShadowDarkness(shadowDarkness); // new
+            */
         }
 
         _updateBackgroundColor(color) {
+            //console.log('updateBackgroundColor() called');
             const widget = this._shadowRoot.querySelector('#content');
             widget.style.backgroundColor = color;
         }
 
         _updateOpacity(opacity) {
+            //console.log('updateShadowSize() called');
             const widget = this._shadowRoot.querySelector('#content');
             widget.style.opacity = opacity;
         }
 
 
         _updateBlur(blur) {
+            //console.log('updateBlur() called');
             const widget = this._shadowRoot.querySelector('#content');
             widget.style.webkitBackdropFilter = `blur(${blur}px)`;
             widget.style.backdropFilter = `blur(${blur}px)`;
@@ -104,17 +108,21 @@
 
         _updateBorderRadius(borderRadius) {
             const widget = this._shadowRoot.querySelector('#content');
-            widget.style.boxShadow = `0 0 10px rgba(0, 0, 0, 0.5)`;
+            //widget.style.boxShadow = `0 0 10px rgba(0, 0, 0, 0.5)`;
             widget.style.borderRadius = `${borderRadius}px`;
         }
 
-        updateShadowSize(size) { // new
-            console.log('updateShadowSize() called');
+        updateShadowSize(size) { 
+            //console.log('updateShadowSize() called');
             const widget = this._shadowRoot.querySelector('#content');
             widget.style.boxShadow = `0 0 ${size}px rgba(0, 0, 0, 0.5)`;
         } 
-
+        
         updateShadowDarkness(darkness) {
+            // tried to handle ShadowDarkness as a seperate property
+            // Is not called, because it didn't work like expected
+            // but note: changing the opacity already applies a similar effect
+            
             const widget = this._shadowRoot.querySelector('#content');
             const existingBoxShadow = widget.style.boxShadow;
             const [xOffset, yOffset, blurRadius, spreadRadius, color] = existingBoxShadow.split(' ');
