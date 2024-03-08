@@ -17,7 +17,7 @@
             left: 10px;
             right: 10px;
             bottom: 10px;
-            //border: 1px solid rgba(255,255,255,0.25);
+            border: 1px solid rgba(255,255,255,0.7);
 
             
             background-color: rgba(255, 255, 255);
