@@ -17,11 +17,11 @@
             left: 10px;
             right: 10px;
             bottom: 10px;
-            border: 1px solid rgba(255,255,255,0.25);
+            //border: 1px solid rgba(255,255,255,0.25);
 
             
             background-color: rgba(255, 255, 255);
-            opacity: 0.0;
+            opacity: 0.25;
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             border-radius: 0;
